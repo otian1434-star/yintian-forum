@@ -11,7 +11,7 @@ const FORUM_CONFIG = {
   heroSubTitle: "正統承胤・天命再臨",
   heroVideo: "",
   heroImage: "assets/media/hero-characters.png",
-  brandLogo: "assets/media/brand-mark.svg",
+  brandLogo: "assets/media/yintian-official-logo.png",
 
   lineOfficial: YINTIAN_PENDING_LINK,
   lineCommunity: YINTIAN_PENDING_LINK,

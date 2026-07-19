@@ -42,9 +42,12 @@ body::before {
 }
 
 .logo-img {
-  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  border-radius: 2px;
   border: 1px solid #c49a5c;
-  background: #641916;
+  object-fit: cover;
+  background: #090806;
   box-shadow: 0 0 0 2px #2b0d0c, 0 0 15px rgba(116,31,29,.55);
 }
 
