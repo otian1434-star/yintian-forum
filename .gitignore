@@ -1,5 +1,4 @@
 node_modules/
-.next/
-public/
+dist/
 npm-debug.log*
 .DS_Store
