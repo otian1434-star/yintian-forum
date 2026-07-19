@@ -1,6 +1,6 @@
 # 胤天天堂獨立官方站
 
-這個資料夾是一份可獨立部署的靜態網站，品牌、設定與服務入口皆與其他網站分離。
+這個資料夾是一份可獨立部署的靜態論壇，品牌、設定與服務入口皆與其他網站分離。部署層使用 Vinext 產生平台需要的 Cloudflare Worker 包裝。
 
 ## 部署原則
 
@@ -16,7 +16,7 @@
 - 全站設定：`config.js` 與 `data/site.json`
 - 公告資料：`data/posts.json`
 - 修改頁面後執行：`node scripts/build-search-index.js`
-- 部署建置：`npm run build`（會把靜態內容整理到未追蹤的 `dist/`）
-- `server/index.js` 是部署平台使用的靜態資源入口，不包含後台或資料庫邏輯。
+- 部署建置：`npm run build`（會產生未追蹤的 `public/` 與 `dist/`）
+- Vinext 只負責靜態資源路由，不包含後台或資料庫邏輯。
 
 本站不設文章後台與網站帳號申請。`register.html` 僅作為官方 LINE 轉址相容入口，不含表單或資料蒐集。

@@ -1,4 +1,8 @@
 node_modules/
 dist/
+public/
+.next/
 npm-debug.log*
 .DS_Store
+.vinext/
+.wrangler/
