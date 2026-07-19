@@ -1,6 +1,6 @@
 # 胤天天堂獨立官方站
 
-這個資料夾是一份可獨立部署的靜態論壇，品牌、設定與服務入口皆與其他網站分離。部署層使用 Vinext 產生平台需要的 Cloudflare Worker 包裝。
+這個資料夾是一份可獨立部署的靜態論壇，品牌、設定與服務入口皆與其他網站分離。部署層使用極小型 Cloudflare Worker 供應靜態資源，不包含應用程式後端。
 
 ## 部署原則
 
@@ -17,6 +17,6 @@
 - 公告資料：`data/posts.json`
 - 修改頁面後執行：`node scripts/build-search-index.js`
 - 部署建置：`npm run build`（會產生未追蹤的 `public/` 與 `dist/`）
-- Vinext 只負責靜態資源路由，不包含後台或資料庫邏輯。
+- Worker 只負責首頁與靜態資源路由，不包含後台、資料庫或帳號 API。
 
 本站不設文章後台與網站帳號申請。`register.html` 僅作為官方 LINE 轉址相容入口，不含表單或資料蒐集。

@@ -3,6 +3,7 @@ const path = require("path");
 
 const root = path.resolve(__dirname, "..");
 const publicDir = path.join(root, "public");
+const distDir = path.join(root, "dist");
 const directories = ["assets", "data", "pages"];
 const files = ["index.html", "register.html", "config.js", "_redirects"];
 
@@ -17,6 +18,7 @@ function copyDirectory(source, destination) {
 }
 
 fs.rmSync(publicDir, { recursive: true, force: true });
+fs.rmSync(distDir, { recursive: true, force: true });
 fs.mkdirSync(publicDir, { recursive: true });
 
 for (const directory of directories) {
