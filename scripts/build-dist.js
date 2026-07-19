@@ -27,4 +27,7 @@ for (const file of files) {
   fs.copyFileSync(path.join(root, file), path.join(distDir, file));
 }
 
+copyDirectory(path.join(root, "server"), path.join(distDir, "server"));
+copyDirectory(path.join(root, ".openai"), path.join(distDir, ".openai"));
+
 console.log("Built independent static site in dist/");
