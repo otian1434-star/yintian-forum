@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="../assets/media/brand-mark.svg">
+
+<meta name="theme-color" content="#0d0b08">
+<title>四龍之魔眼 - 胤天天堂</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/yintian-theme.css">
+<script src="../config.js"></script>
+<style>
+.dragon-eye-guide {
+  --gold: #d8b46a;
+  --gold-soft: #f3d995;
+  --panel: rgba(24, 20, 14, 0.92);
+  --panel-2: rgba(14, 12, 9, 0.94);
+  --line: rgba(216, 180, 106, 0.35);
+  --text: #efe5cf;
+  --muted: #aa9873;
+  --fire: #ff6b44;
+  --wind: #6be38f;
+  --water: #6fb8ff;
+  --earth: #c49a70;
+  color: var(--text);
+  font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+}
+.dragon-eye-guide * {
+  box-sizing: border-box;
+}
+.eye-hero {
+  padding: clamp(22px, 4vw, 38px);
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 22% 0%, rgba(216, 180, 106, 0.2), transparent 36%),
+    linear-gradient(135deg, rgba(37, 27, 14, 0.96), rgba(8, 7, 5, 0.96));
+  box-shadow: 0 0 34px rgba(216, 180, 106, 0.12);
+  margin-bottom: 22px;
+}
+.eye-hero h2 {
+  margin: 0;
+  color: #fff7df;
+  font-size: clamp(30px, 5vw, 48px);
+  letter-spacing: 0;
+  text-align: center;
+  text-shadow: 0 0 18px rgba(216, 180, 106, 0.38);
+}
+.eye-hero p {
+  margin: 12px auto 0;
+  max-width: 760px;
+  color: var(--gold-soft);
+  line-height: 1.8;
+  text-align: center;
+}
+.eye-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 0 0 26px;
+}
+.eye-tabs a {
+  color: var(--gold-soft);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  background: rgba(20, 16, 10, 0.92);
+  padding: 10px 18px;
+  font-weight: 700;
+  transition: border-color .2s ease, color .2s ease, transform .2s ease;
+}
+.eye-tabs a:hover {
+  color: #fff;
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+.eye-section {
+  margin: 0 0 34px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(28, 23, 15, 0.94), rgba(10, 9, 7, 0.94));
+  box-shadow: 0 18px 38px rgba(0,0,0,.24);
+}
+.eye-section-title {
+  padding: 20px clamp(18px, 3vw, 30px);
+  border-bottom: 1px solid var(--line);
+  background: rgba(216, 180, 106, 0.08);
+}
+.eye-section-title small {
+  display: block;
+  color: var(--muted);
+  letter-spacing: 8px;
+  font-size: 12px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.eye-section-title h3 {
+  margin: 0;
+  color: #fff5d6;
+  font-size: clamp(24px, 4vw, 36px);
+  letter-spacing: 0;
+}
+.eye-section-body {
+  padding: clamp(18px, 3vw, 30px);
+}
+.eye-note {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 16px 18px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(216, 180, 106, 0.28);
+  background: rgba(8, 7, 5, 0.55);
+  color: #d8c69e;
+  line-height: 1.8;
+}
+.eye-note-icon {
+  color: var(--gold-soft);
+  font-size: 28px;
+  line-height: 1;
+}
+.eye-note strong {
+  color: #fff1c2;
+}
+.eye-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  background: rgba(4, 4, 3, 0.42);
+}
+.eye-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+}
+.eye-table th,
+.eye-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(216, 180, 106, 0.18);
+  text-align: left;
+}
+.eye-table th {
+  color: #fff5d6;
+  background: rgba(216, 180, 106, 0.12);
+  font-weight: 800;
+}
+.eye-table tr:last-child td {
+  border-bottom: 0;
+}
+.eye-name {
+  font-weight: 900;
+  white-space: nowrap;
+}
+.eye-name.fire { color: var(--fire); }
+.eye-name.wind { color: var(--wind); }
+.eye-name.water { color: var(--water); }
+.eye-name.earth { color: var(--earth); }
+.ability-pill {
+  display: inline-block;
+  margin: 0 0 6px;
+  padding: 4px 10px;
+  border: 1px solid currentColor;
+  background: rgba(255,255,255,0.05);
+  font-weight: 800;
+}
+.sub-stat {
+  color: #b9aa86;
+  font-size: 14px;
+}
+.combined-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+.eye-card {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  min-width: 0;
+}
+.eye-card-head {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--line);
+  font-weight: 900;
+  font-size: 20px;
+  color: #fff6dc;
+}
+.eye-card-head.birth {
+  background: linear-gradient(135deg, rgba(106, 27, 154, .55), rgba(20, 16, 10, .96));
+}
+.eye-card-head.image {
+  background: linear-gradient(135deg, rgba(0, 105, 92, .55), rgba(20, 16, 10, .96));
+}
+.eye-card-head.life {
+  background: linear-gradient(135deg, rgba(184, 134, 11, .6), rgba(20, 16, 10, .96));
+}
+.eye-card-body {
+  padding: 16px 18px 18px;
+}
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(216, 180, 106, 0.14);
+}
+.stat-row:last-child {
+  border-bottom: 0;
+}
+.stat-name {
+  color: #cfbf97;
+}
+.stat-val {
+  color: #fff2bf;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.stat-val.neg {
+  color: #ff8c68;
+}
+.mat-section {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.mat-title {
+  color: var(--muted);
+  letter-spacing: 4px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.req-eyes,
+.mat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.req-eyes {
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.req-eye-tag,
+.mat-item {
+  border: 1px solid rgba(216, 180, 106, 0.25);
+  background: rgba(10, 9, 7, 0.62);
+  color: #ddcfae;
+}
+.req-eye-tag {
+  padding: 4px 9px;
+  font-size: 12px;
+  font-weight: 800;
+}
+.mat-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px;
+}
+.mat-name {
+  color: #e9dcc0;
+}
+.mat-qty {
+  color: #fff0b7;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.tone-fire { color: var(--fire); }
+.tone-wind { color: var(--wind); }
+.tone-water { color: var(--water); }
+.tone-earth { color: var(--earth); }
+@media (max-width: 640px) {
+  .eye-note {
+    grid-template-columns: 1fr;
+  }
+  .mat-item {
+    align-items: flex-start;
+  }
+}
+</style>
+</head>
+<body>
+<div id="header-slot"></div>
+<div id="nav-slot"></div>
+<div id="main-wrap">
+<div id="page-content">
+
+<div class="page-hdr">
+  <h1>👁️ 四龍之魔眼</h1>
+  <p>四龍魔眼、合成魔眼與製作材料</p>
+</div>
+
+<div class="content-embed dragon-eye-guide">
+  <div class="eye-hero">
+    <h2>魔眼介紹</h2>
+    <p>四龍之魔眼可透過解除封印與製作取得，並能進一步合成誕生、形象、生命之魔眼，逐步解放更完整的龍族加護。</p>
+  </div>
+
+  <div class="eye-tabs" aria-label="魔眼介紹快速導覽">
+    <a href="#four-eyes">四龍之魔眼</a>
+    <a href="#combined-eyes">合成魔眼</a>
+  </div>
+
+  <section class="eye-section" id="four-eyes">
+    <div class="eye-section-title">
+      <small>Dragon Eyes</small>
+      <h3>四龍之魔眼</h3>
+    </div>
+    <div class="eye-section-body">
+      <div class="eye-note">
+        <div class="eye-note-icon">🔮</div>
+        <div>
+          <strong>製作方式</strong><br>
+          獲取「封印的魔眼」後，請前往主城尋找 NPC 進行解除封印與製作。
+        </div>
+      </div>
+
+      <div class="eye-table-wrap">
+        <table class="eye-table">
+          <thead>
+            <tr>
+              <th>道具名稱</th>
+              <th>道具能力</th>
+              <th>獲得管道</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="eye-name fire">🔥 (火龍) 之魔眼</td>
+              <td>
+                <span class="ability-pill tone-fire">額外攻擊 +2</span>
+                <div class="sub-stat">昏迷耐性 +3</div>
+              </td>
+              <td>巴拉卡斯</td>
+            </tr>
+            <tr>
+              <td class="eye-name wind">🍃 (風龍) 之魔眼</td>
+              <td>
+                <span class="ability-pill tone-wind">魔法爆擊 +2</span>
+                <div class="sub-stat">睡眠耐性 +3</div>
+              </td>
+              <td>林德拜爾</td>
+            </tr>
+            <tr>
+              <td class="eye-name water">💧 (水龍) 之魔眼</td>
+              <td>
+                <span class="ability-pill tone-water">機率受擊回血 +10</span>
+                <div class="sub-stat">寒冰耐性 +3</div>
+              </td>
+              <td>法利昂</td>
+            </tr>
+            <tr>
+              <td class="eye-name earth">🪨 (地龍) 之魔眼</td>
+              <td>
+                <span class="ability-pill tone-earth">機率傷害減免 +10</span>
+                <div class="sub-stat">石化耐性 +3</div>
+              </td>
+              <td>安塔瑞斯</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="eye-section" id="combined-eyes">
+    <div class="eye-section-title">
+      <small>Advanced Craft</small>
+      <h3>合成魔眼</h3>
+    </div>
+    <div class="eye-section-body">
+      <div class="eye-note">
+        <div class="eye-note-icon">⚗️</div>
+        <div>
+          <strong>合成說明</strong><br>
+          將四龍之魔眼組合材料，透過 NPC 製作更強力的合成魔眼。等級越高所需材料越多。
+        </div>
+      </div>
+
+      <div class="combined-grid">
+        <article class="eye-card">
+          <div class="eye-card-head birth">🌱 誕生之魔眼</div>
+          <div class="eye-card-body">
+            <div class="stat-row"><span class="stat-name">HP</span><span class="stat-val">+300</span></div>
+            <div class="stat-row"><span class="stat-name">MP</span><span class="stat-val">+150</span></div>
+            <div class="stat-row"><span class="stat-name">防禦</span><span class="stat-val neg">-3</span></div>
+            <div class="stat-row"><span class="stat-name">魔防</span><span class="stat-val">+3</span></div>
+            <div class="stat-row"><span class="stat-name tone-earth">🪨 機率傷害減免</span><span class="stat-val">+10</span></div>
+            <div class="stat-row"><span class="stat-name tone-earth">🪨 石化耐性</span><span class="stat-val">+3</span></div>
+            <div class="stat-row"><span class="stat-name tone-water">💧 機率受擊回血</span><span class="stat-val">+10</span></div>
+            <div class="stat-row"><span class="stat-name tone-water">💧 寒冰耐性</span><span class="stat-val">+3</span></div>
+
+            <div class="mat-section">
+              <div class="mat-title">所需材料</div>
+              <div class="req-eyes">
+                <span class="req-eye-tag">🪨 (地龍) 之魔眼</span>
+                <span class="req-eye-tag">💧 (水龍) 之魔眼</span>
+              </div>
+              <div class="mat-list">
+                <div class="mat-item"><span class="mat-name">🪨 (地龍) 之魔眼</span><span class="mat-qty">× 3</span></div>
+                <div class="mat-item"><span class="mat-name">💧 (水龍) 之魔眼</span><span class="mat-qty">× 3</span></div>
+                <div class="mat-item"><span class="mat-name">英雄製作秘笈</span><span class="mat-qty">× 2</span></div>
+                <div class="mat-item"><span class="mat-name">藍鑽</span><span class="mat-qty">× 3,000</span></div>
+                <div class="mat-item"><span class="mat-name">金幣</span><span class="mat-qty">1,500 萬</span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="eye-card">
+          <div class="eye-card-head image">🌿 形象之魔眼</div>
+          <div class="eye-card-body">
+            <div class="stat-row"><span class="stat-name">HP</span><span class="stat-val">+500</span></div>
+            <div class="stat-row"><span class="stat-name">MP</span><span class="stat-val">+250</span></div>
+            <div class="stat-row"><span class="stat-name">防禦</span><span class="stat-val neg">-5</span></div>
+            <div class="stat-row"><span class="stat-name">魔防</span><span class="stat-val">+8</span></div>
+            <div class="stat-row"><span class="stat-name tone-earth">🪨 機率傷害減免</span><span class="stat-val">+10</span></div>
+            <div class="stat-row"><span class="stat-name tone-earth">🪨 石化耐性</span><span class="stat-val">+3</span></div>
+            <div class="stat-row"><span class="stat-name tone-water">💧 機率受擊回血</span><span class="stat-val">+10</span></div>
+            <div class="stat-row"><span class="stat-name tone-water">💧 寒冰耐性</span><span class="stat-val">+3</span></div>
+            <div class="stat-row"><span class="stat-name tone-wind">🍃 魔法爆擊</span><span class="stat-val">+2</span></div>
+            <div class="stat-row"><span class="stat-name tone-wind">🍃 睡眠耐性</span><span class="stat-val">+3</span></div>
+
+            <div class="mat-section">
+              <div class="mat-title">所需材料</div>
+              <div class="req-eyes">
+                <span class="req-eye-tag">🪨 (地龍) 之魔眼</span>
+                <span class="req-eye-tag">💧 (水龍) 之魔眼</span>
+                <span class="req-eye-tag">🍃 (風龍) 之魔眼</span>
+              </div>
+              <div class="mat-list">
+                <div class="mat-item"><span class="mat-name">🪨 (地龍) 之魔眼</span><span class="mat-qty">× 2</span></div>
+                <div class="mat-item"><span class="mat-name">💧 (水龍) 之魔眼</span><span class="mat-qty">× 2</span></div>
+                <div class="mat-item"><span class="mat-name">🍃 (風龍) 之魔眼</span><span class="mat-qty">× 5</span></div>
+                <div class="mat-item"><span class="mat-name">英雄製作秘笈</span><span class="mat-qty">× 3</span></div>
+                <div class="mat-item"><span class="mat-name">傳說製作秘笈</span><span class="mat-qty">× 1</span></div>
+                <div class="mat-item"><span class="mat-name">藍鑽</span><span class="mat-qty">× 5,000</span></div>
+                <div class="mat-item"><span class="mat-name">金幣</span><span class="mat-qty">2,000 萬</span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="eye-card">
+          <div class="eye-card-head life">⭐ 生命之魔眼</div>
+          <div class="eye-card-body">
+            <div class="stat-row"><span class="stat-name">HP</span><span class="stat-val">+800</span></div>
+            <div class="stat-row"><span class="stat-name">MP</span><span class="stat-val">+300</span></div>
+            <div class="stat-row"><span class="stat-name">防禦</span><span class="stat-val neg">-8</span></div>
+            <div class="stat-row"><span class="stat-name">魔防</span><span class="stat-val">+12</span></div>
+            <div class="stat-row"><span class="stat-name tone-earth">🪨 機率傷害減免</span><span class="stat-val">+10</span></div>
+            <div class="stat-row"><span class="stat-name tone-earth">🪨 石化耐性</span><span class="stat-val">+3</span></div>
+            <div class="stat-row"><span class="stat-name tone-water">💧 機率受擊回血</span><span class="stat-val">+10</span></div>
+            <div class="stat-row"><span class="stat-name tone-water">💧 寒冰耐性</span><span class="stat-val">+3</span></div>
+            <div class="stat-row"><span class="stat-name tone-wind">🍃 魔法爆擊</span><span class="stat-val">+2</span></div>
+            <div class="stat-row"><span class="stat-name tone-wind">🍃 睡眠耐性</span><span class="stat-val">+3</span></div>
+            <div class="stat-row"><span class="stat-name tone-fire">🔥 額外攻擊</span><span class="stat-val">+2</span></div>
+            <div class="stat-row"><span class="stat-name tone-fire">🔥 昏迷耐性</span><span class="stat-val">+3</span></div>
+
+            <div class="mat-section">
+              <div class="mat-title">所需材料</div>
+              <div class="req-eyes">
+                <span class="req-eye-tag">🪨 (地龍) 之魔眼</span>
+                <span class="req-eye-tag">💧 (水龍) 之魔眼</span>
+                <span class="req-eye-tag">🍃 (風龍) 之魔眼</span>
+                <span class="req-eye-tag">🔥 (火龍) 之魔眼</span>
+              </div>
+              <div class="mat-list">
+                <div class="mat-item"><span class="mat-name">🪨 (地龍) 之魔眼</span><span class="mat-qty">× 2</span></div>
+                <div class="mat-item"><span class="mat-name">💧 (水龍) 之魔眼</span><span class="mat-qty">× 2</span></div>
+                <div class="mat-item"><span class="mat-name">🍃 (風龍) 之魔眼</span><span class="mat-qty">× 2</span></div>
+                <div class="mat-item"><span class="mat-name">🔥 (火龍) 之魔眼</span><span class="mat-qty">× 7</span></div>
+                <div class="mat-item"><span class="mat-name">英雄製作秘笈</span><span class="mat-qty">× 3</span></div>
+                <div class="mat-item"><span class="mat-name">傳說製作秘笈</span><span class="mat-qty">× 2</span></div>
+                <div class="mat-item"><span class="mat-name">藍鑽</span><span class="mat-qty">× 7,000</span></div>
+                <div class="mat-item"><span class="mat-name">金幣</span><span class="mat-qty">3,000 萬</span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>
+
+</div>
+</div>
+<div id="footer-slot"></div>
+<script src="../assets/js/forum.js"></script>
+</body>
+</html>

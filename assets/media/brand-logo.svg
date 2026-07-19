@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320" role="img" aria-labelledby="title desc">
+  <title id="title">胤天天堂</title>
+  <desc id="desc">以王城黎明與血脈印記構成的胤天品牌字標</desc>
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b5143"/>
+      <stop offset="0.24" stop-color="#171716"/>
+      <stop offset="0.56" stop-color="#312a23"/>
+      <stop offset="0.78" stop-color="#0e0f0f"/>
+      <stop offset="1" stop-color="#66523a"/>
+    </linearGradient>
+    <linearGradient id="dawn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d5a65e"/>
+      <stop offset="1" stop-color="#7a211e"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="9" stdDeviation="8" flood-color="#000" flood-opacity=".78"/>
+    </filter>
+  </defs>
+
+  <g transform="translate(480 60)" fill="none" stroke-linecap="square">
+    <circle r="31" fill="#d7b66e" opacity=".12" filter="url(#glow)"/>
+    <path d="M0-46V2M-42 13H42" stroke="url(#dawn)" stroke-width="2" opacity=".88"/>
+    <path d="M-72 25V8h17v-18l21-15 19 15V-3H0v-23l18-18 18 18V-3h15v-7l21-15L93-10V8h17v17"
+          stroke="url(#metal)" stroke-width="4"/>
+    <path d="M-116 34H116M-94 43H94" stroke="#b79353" stroke-width="2" opacity=".7"/>
+    <path d="M0-58l7 13-7 13-7-13z" fill="#e4c880" stroke="#f8e9bd" stroke-width="1"/>
+  </g>
+
+  <g filter="url(#shadow)" text-anchor="middle" font-family="Noto Serif TC, Source Han Serif TC, PMingLiU, serif">
+    <text x="480" y="224" fill="url(#metal)" stroke="#8f6233" stroke-width="3" paint-order="stroke" font-size="142" font-weight="800" letter-spacing="26">胤天</text>
+    <text x="480" y="286" fill="#3b2416" stroke="#a77a43" stroke-width="1" paint-order="stroke" font-size="34" font-weight="700" letter-spacing="24">天 堂</text>
+  </g>
+
+  <g fill="none" stroke="#a8864d" opacity=".78">
+    <path d="M176 270H344l18 10 18-10h18"/>
+    <path d="M784 270H616l-18 10-18-10h-18"/>
+    <path d="M480 262l8 8-8 8-8-8z" fill="#c7a65f"/>
+  </g>
+</svg>

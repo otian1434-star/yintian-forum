@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="胤天品牌印記">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4dfad"/>
+      <stop offset=".52" stop-color="#b18a4d"/>
+      <stop offset="1" stop-color="#741f1d"/>
+    </linearGradient>
+  </defs>
+  <rect x="5" y="5" width="118" height="118" rx="64" fill="#5d1715" stroke="#a87842" stroke-width="3"/>
+  <path d="M19 95h90M28 87V67h13V52l13-10 10 9 10-9 13 10v15h13v20" fill="none" stroke="url(#g)" stroke-width="4"/>
+  <path d="M64 17l7 12-7 12-7-12z" fill="#d9bb78"/>
+  <path d="M64 29v39" stroke="#ead59d" stroke-width="2"/>
+  <text x="64" y="112" text-anchor="middle" fill="#e0c18c" font-size="16" font-weight="700" font-family="Noto Serif TC, PMingLiU, serif">胤天</text>
+</svg>

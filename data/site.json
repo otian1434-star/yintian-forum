@@ -1,0 +1,57 @@
+{
+  "forumName": "胤天天堂",
+  "forumFullName": "胤天天堂｜正統承胤・天命再臨",
+  "forumSlogan": "正統承胤・天命再臨",
+  "serverVersion": "3.81 內掛版",
+  "heroTitle": "胤天",
+  "heroSubTitle": "正統承胤・天命再臨",
+  "heroVideo": "",
+  "heroImage": "assets/media/hero-characters.png",
+  "brandLogo": "assets/media/brand-mark.svg",
+  "lineOfficial": "#service-pending",
+  "lineCommunity": "#service-pending",
+  "lineId": "籌備中",
+  "teamName": "胤天天堂管理團隊",
+  "download": {
+    "mainUrl": "",
+    "backup1": "",
+    "backup2": "",
+    "backup3": "",
+    "patchUrl": "",
+    "updateDate": "籌備中",
+    "anyDeskUrl": "https://anydesk.com/zh-tw/downloads/windows"
+  },
+  "sponsorUrl": "",
+  "floatingPanel": {
+    "enabled": true,
+    "title": "胤天王城捷徑",
+    "note": "官方資料 · 遊戲導覽",
+    "links": [
+      { "label": "遊戲資料庫", "icon": "典", "url": "pages/game-database.html", "style": "gold" },
+      { "label": "遊戲下載", "icon": "錄", "url": "pages/download.html", "style": "blue" },
+      { "label": "全站搜尋", "icon": "查", "url": "pages/search.html", "style": "dark" },
+      { "label": "王城公告", "icon": "詔", "url": "pages/news.html", "style": "dark" }
+    ]
+  },
+  "sideBanners": { "enabled": false },
+  "musicPlayer": {
+    "enabled": true,
+    "title": "胤天王城樂章",
+    "autoplay": true,
+    "loop": true,
+    "shuffle": true,
+    "volume": 0.62,
+    "tracks": [
+      { "title": "王城樂章 1", "url": "assets/media/music/music142.mp3" },
+      { "title": "王城樂章 2", "url": "assets/media/music/music146.mp3" },
+      { "title": "王城樂章 3", "url": "assets/media/music/music153.mp3" },
+      { "title": "王城樂章 4", "url": "assets/media/music/music176.mp3" }
+    ]
+  },
+  "popup": { "enabled": false },
+  "heroBadges": [
+    "✦ 3.81 內掛版",
+    "⚔ 正統版本節奏",
+    "⌛ 開服資訊籌備中"
+  ]
+}

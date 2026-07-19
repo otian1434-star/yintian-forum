@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="../assets/media/brand-mark.svg">
+
+<meta name="theme-color" content="#0d0b08">
+<title>最新文章 - 胤天天堂</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/yintian-theme.css">
+<script src="../config.js"></script>
+</head>
+<body>
+
+<div id="header-slot"></div>
+<div id="nav-slot"></div>
+
+<div id="main-wrap">
+  <div id="page-content">
+    <div class="page-hdr">
+      <h1>最新文章</h1>
+      <p>後台發布的公告、活動、更新與攻略文章</p>
+    </div>
+
+    <div id="cms-news-list"></div>
+  </div>
+</div>
+
+<div id="footer-slot"></div>
+
+<script src="../assets/js/cms-posts.js"></script>
+<script src="../assets/js/forum.js"></script>
+<script>
+ForumCmsPosts.renderNewsList(document.getElementById('cms-news-list'));
+</script>
+</body>
+</html>

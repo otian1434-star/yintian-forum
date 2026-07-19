@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="../assets/media/brand-mark.svg">
+
+<meta name="theme-color" content="#0d0b08">
+<title>更新歷程 - 胤天天堂</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/yintian-theme.css">
+<script src="../config.js"></script>
+</head>
+<body>
+<div id="header-slot"></div>
+<div id="nav-slot"></div>
+<div id="main-wrap">
+<div id="page-content">
+
+<div class="page-hdr">
+  <h1>📋 更新歷程</h1>
+  <p>伺服器版本更新與異動紀錄</p>
+</div>
+
+<div class="update-list" id="full-update-list"></div>
+
+</div>
+</div>
+<div id="footer-slot"></div>
+<script src="../assets/js/cms-posts.js"></script>
+<script src="../assets/js/forum.js"></script>
+<script>
+(function () {
+  const target = document.getElementById('full-update-list');
+  if (window.ForumCmsPosts && ForumCmsPosts.renderUpdatesFullList) {
+    ForumCmsPosts.renderUpdatesFullList(target);
+  } else {
+    target.innerHTML = '<div class="notice red">更新歷程模組載入失敗，請重新整理頁面。</div>';
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="../assets/media/brand-mark.svg">
+
+<meta name="theme-color" content="#0d0b08">
+<title>全站搜尋 - 胤天天堂</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/yintian-theme.css">
+<script src="../config.js"></script>
+</head>
+<body>
+<div id="header-slot"></div>
+<div id="nav-slot"></div>
+<div id="main-wrap">
+  <div id="page-content">
+    <div class="page-hdr">
+      <h1>全站搜尋</h1>
+      <p>輸入關鍵字快速查找公告、攻略、下載與遊戲資料</p>
+    </div>
+
+    <section class="search-shell" aria-labelledby="forum-search-title">
+      <form class="search-panel" id="forum-search-form" role="search">
+        <label id="forum-search-title" for="forum-search-input">搜尋論壇內容</label>
+        <div class="search-input-row">
+          <input id="forum-search-input" class="search-input" type="search" name="q" autocomplete="off" placeholder="輸入關鍵字，例如 BOSS、下載、防毒、倍率">
+          <button class="search-submit" type="submit">搜尋</button>
+        </div>
+        <div class="search-chip-row" aria-label="常用搜尋">
+          <button type="button" data-search-chip="BOSS">BOSS</button>
+          <button type="button" data-search-chip="下載">下載</button>
+          <button type="button" data-search-chip="防毒">防毒</button>
+          <button type="button" data-search-chip="娃娃">娃娃</button>
+          <button type="button" data-search-chip="倍率">倍率</button>
+          <button type="button" data-search-chip="武器">武器</button>
+          <button type="button" data-search-chip="怪物">怪物</button>
+        </div>
+      </form>
+
+      <div class="search-summary" id="forum-search-summary"></div>
+      <div class="search-results" id="forum-search-results"></div>
+    </section>
+  </div>
+</div>
+<div id="footer-slot"></div>
+<script src="../assets/js/forum.js"></script>
+<script src="../assets/js/search.js"></script>
+</body>
+</html>

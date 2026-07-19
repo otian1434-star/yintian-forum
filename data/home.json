@@ -1,0 +1,33 @@
+{
+  "sections": {
+    "announcements": { "eyebrow": "ROYAL DECREE", "title": "王城公告", "buttonText": "查看全部公告", "buttonUrl": "pages/news.html" },
+    "quickLinks": { "eyebrow": "ROYAL ARCHIVE", "title": "王城典藏" },
+    "serverInfo": { "eyebrow": "SERVER COVENANT", "title": "伺服器資訊" },
+    "updates": { "eyebrow": "CHRONICLE", "title": "更新編年", "buttonText": "查看完整歷程", "buttonUrl": "pages/updates.html" }
+  },
+  "quickLinks": [
+    { "icon": "📥", "title": "遊戲下載", "description": "專屬載點籌備中", "url": "pages/download.html", "visible": true },
+    { "icon": "📜", "title": "版本設定", "description": "伺服器倍率", "url": "pages/version.html", "visible": true },
+    { "icon": "📖", "title": "更新編年", "description": "版本更新紀錄", "url": "pages/updates.html", "visible": true },
+    { "icon": "⚔", "title": "遊戲特色", "description": "職業與系統", "url": "pages/features-overview.html", "visible": true },
+    { "icon": "♜", "title": "世界首領", "description": "BOSS 時刻表", "url": "pages/boss-schedule.html", "visible": true },
+    { "icon": "◈", "title": "裝備典藏", "description": "武器與防具", "url": "pages/game-database.html", "visible": true },
+    { "icon": "⌕", "title": "全站搜尋", "description": "快速尋找資料", "url": "pages/search.html", "visible": true },
+    { "icon": "✦", "title": "常見問題", "description": "加入前必讀", "url": "pages/faq.html", "visible": true },
+    { "icon": "胤", "title": "加入官方 LINE", "description": "帳號服務與官方客服", "url": "register.html", "highlight": true, "visible": true }
+  ],
+  "serverCards": [
+    {
+      "title": "胤天天堂｜籌備中",
+      "subtitle": "ORTHODOX BLOODLINE · 3.81",
+      "rows": [
+        { "label": "版本", "value": "3.81 內掛版", "highlight": true },
+        { "label": "品牌定位", "value": "正統承胤・天命再臨", "highlight": true },
+        { "label": "開服日期", "value": "確認後公布", "highlight": true },
+        { "label": "官方 LINE", "value": "專屬帳號籌備中" },
+        { "label": "下載與申請", "value": "尚未開放" }
+      ]
+    }
+  ],
+  "updates": []
+}

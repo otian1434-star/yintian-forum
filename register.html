@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#0b0a08">
+<link rel="icon" type="image/svg+xml" href="assets/media/brand-mark.svg">
+<title>加入官方 LINE - 胤天天堂</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/yintian-theme.css">
+<script src="config.js"></script>
+</head>
+<body>
+<div id="header-slot"></div>
+<div id="main-wrap">
+  <div id="page-content">
+    <div class="page-hdr">
+      <h1>💬 加入官方 LINE</h1>
+      <p>帳號相關服務統一由胤天官方 LINE 協助</p>
+    </div>
+    <div class="content-card" style="max-width:760px;margin:0 auto;text-align:center;padding:52px 28px;">
+      <img src="assets/media/brand-mark.svg" alt="胤天印記" style="width:92px;margin:0 auto 22px;">
+      <h2 id="line-title" style="color:var(--gold-light);margin:0 0 12px;">正在前往胤天官方 LINE</h2>
+      <p id="line-message" style="color:var(--text-dim);line-height:1.9;margin:0 auto 24px;">請稍候，系統正在確認官方入口。</p>
+      <a id="line-button" class="form-submit" href="#service-pending" style="display:none;max-width:320px;margin:0 auto;">加入胤天官方 LINE</a>
+      <a href="index.html" style="display:inline-block;margin-top:22px;color:var(--gold);">返回官方首頁</a>
+    </div>
+  </div>
+</div>
+<div id="footer-slot"></div>
+<script src="assets/js/forum.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var url = typeof FORUM_CONFIG !== 'undefined' ? FORUM_CONFIG.lineOfficial : '';
+  var ready = !!(url && url !== '#' && url !== '#service-pending');
+  var title = document.getElementById('line-title');
+  var message = document.getElementById('line-message');
+  var button = document.getElementById('line-button');
+  if (ready) {
+    button.href = url;
+    button.style.display = 'block';
+    window.setTimeout(function () { window.location.replace(url); }, 500);
+  } else {
+    title.textContent = '胤天官方 LINE 籌備中';
+    message.textContent = '專屬 LINE 網址尚未公布；本站不會轉接其他伺服器的客服帳號。';
+  }
+});
+</script>
+</body>
+</html>

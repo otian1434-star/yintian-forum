@@ -1,0 +1,19 @@
+{
+  "name": "yintian-lineage-official",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "prepare:public": "node scripts/prepare-public.js",
+    "dev": "npm run prepare:public && next dev",
+    "build": "npm run prepare:public && next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "16.2.10",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "overrides": {
+    "postcss": "8.5.10"
+  }
+}
