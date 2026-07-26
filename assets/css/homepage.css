@@ -256,6 +256,12 @@ img { max-width: 100%; display: block; }
 .site-footer { padding: 54px 22px; border-top: 1px solid var(--line); color: #777f88; text-align: center; font-size: 12px; letter-spacing: .08em; background: #05070b; }
 .site-footer strong { color: var(--gold); font-family: var(--font-title); }
 
+.footer-bottom-promo { max-width: 1080px; margin: 20px auto 0; padding-top: 18px; border-top: 1px solid var(--line); display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.footer-designer-credit { color: var(--gold-bright); font-size: 12px; line-height: 1.6; letter-spacing: .12em; font-weight: 600; text-shadow: 0 0 10px rgba(201,169,110,.36); }
+.footer-gamex-link { display: inline-flex; align-items: center; justify-content: center; opacity: .82; transition: opacity .2s ease, filter .2s ease; }
+.footer-gamex-link:hover { opacity: 1; filter: brightness(1.12); }
+.footer-gamex-link img { display: block; width: 78px; max-width: 24vw; height: auto; }
+
 @media (max-width: 1050px) {
   .nav-links { display: none; position: absolute; left: 0; right: 0; top: 78px; height: auto; padding: 12px 22px 22px; flex-direction: column; background: rgba(5,8,13,.98); border-bottom: 1px solid var(--line); }
   .nav-links.is-open { display: flex; }
