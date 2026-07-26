@@ -436,3 +436,90 @@ body {
 .bloodline-mark { background: radial-gradient(circle, rgba(116,31,29,.2), transparent 66%), #15110d; }
 .bloodline-copy blockquote { border-left-color: #74201d; color: #cbb99b; }
 .site-footer { border-top-color: rgba(183,137,77,.35); color: #8f8069; background: #080706; }
+
+/* ══════════════════════════════════════
+   新手三步驟 / 七大職業 / 攻略資料庫 / 世界觀
+   ══════════════════════════════════════ */
+
+/* --- 共用卡面（沿用胤天定稿的暖金黑） --- */
+.start-card,
+.class-card,
+.archive-card,
+.lore-body {
+  border: 1px solid rgba(183,137,77,.34);
+  background: linear-gradient(145deg, rgba(91,55,26,.12), transparent 48%), #15110d;
+  box-shadow: inset 0 1px rgba(230,198,144,.04), 0 14px 34px rgba(0,0,0,.25);
+}
+
+/* --- 新手三步驟 --- */
+.start-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.start-card { display: flex; flex-direction: column; padding: 32px 30px; transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+.start-card:hover { transform: translateY(-4px); border-color: rgba(216,185,123,.6); }
+.start-no { color: #9f7650; font: 700 11px var(--font-title); letter-spacing: .32em; }
+.start-card h3 { margin: 18px 0 12px; color: var(--gold-bright); font: 700 23px var(--font-title); letter-spacing: .08em; }
+.start-card p { flex: 1; margin: 0; color: #a99980; font-size: 14px; line-height: 1.85; }
+.start-go { margin-top: 20px; color: var(--gold); font-size: 13px; font-weight: 700; letter-spacing: .08em; }
+.start-card.is-highlight { border-color: rgba(216,185,123,.55); background: linear-gradient(145deg, rgba(116,31,29,.26), transparent 52%), #17110c; }
+.start-card.is-highlight h3 { color: #f0dcae; }
+
+/* --- 七大職業 --- */
+.class-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.class-card { overflow: hidden; transition: transform .22s ease, border-color .22s ease; }
+.class-card:hover { transform: translateY(-5px); border-color: rgba(216,185,123,.62); }
+.class-media { position: relative; aspect-ratio: 3 / 4; overflow: hidden; background: #0d0a07; }
+.class-media video { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(.92) contrast(1.04); transition: transform .3s ease; }
+.class-card:hover .class-media video { transform: scale(1.04); }
+.class-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(10,8,6,.88)); pointer-events: none; }
+.class-body { position: relative; margin-top: -54px; padding: 0 20px 20px; z-index: 2; }
+.class-en { color: #9f7650; font: 700 10px var(--font-title); letter-spacing: .26em; }
+.class-body h3 { margin: 4px 0 6px; color: var(--gold-bright); font: 700 22px var(--font-title); letter-spacing: .1em; }
+.class-body p { margin: 0; color: #a99980; font-size: 13px; }
+
+/* --- 遊戲特色卡改為連結後的補強 --- */
+.feature-card { display: flex; flex-direction: column; transition: transform .2s ease, border-color .2s ease; }
+.feature-card:hover { transform: translateY(-4px); border-color: rgba(216,185,123,.6); }
+.feature-card h3 { margin: 22px 0 12px !important; }
+.feature-card p { flex: 1; line-height: 1.85; }
+.feature-go { margin-top: 18px; color: var(--gold); font-size: 13px; font-weight: 700; letter-spacing: .06em; }
+
+/* --- 攻略資料庫 --- */
+.archive-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.archive-card { padding: 28px 28px 24px; }
+.archive-card h3 { margin: 0 0 16px; padding-bottom: 14px; border-bottom: 1px solid rgba(183,137,77,.24); color: var(--gold-bright); font: 700 19px var(--font-title); letter-spacing: .08em; }
+.archive-card ul { margin: 0; padding: 0; list-style: none; }
+.archive-card li { border-bottom: 1px solid rgba(183,137,77,.1); }
+.archive-card li:last-child { border-bottom: 0; }
+.archive-card a { display: block; padding: 10px 0; color: #bcae95; font-size: 14px; transition: color .18s ease, padding-left .18s ease; }
+.archive-card a:hover { color: var(--gold-bright); padding-left: 8px; }
+
+/* --- 世界觀故事 --- */
+.lore-body { padding: 56px 60px; max-width: 900px; margin: 0 auto; }
+.lore-body p { margin: 0 0 20px; color: #b3a488; font-size: 16px; line-height: 2.05; letter-spacing: .02em; }
+.lore-lead { color: #dfcfb2 !important; font: 500 21px/1.9 var(--font-title) !important; letter-spacing: .06em !important; }
+.lore-turn { margin-top: 34px !important; color: var(--gold-bright) !important; font: 700 19px var(--font-title) !important; letter-spacing: .08em !important; }
+.lore-body strong { color: #f0dcae; }
+.lore-seal { margin-top: 40px; padding-top: 28px; border-top: 1px solid rgba(183,137,77,.28); text-align: center; }
+.lore-seal span { display: block; color: var(--gold); font: 500 15px var(--font-title); letter-spacing: .3em; }
+.lore-seal b { display: block; margin-top: 10px; color: #f0dcae; font: 700 22px var(--font-title); letter-spacing: .12em; }
+
+/* --- RWD --- */
+@media (max-width: 1050px) {
+  .class-grid { grid-template-columns: repeat(3, 1fr); }
+  .archive-grid { grid-template-columns: repeat(2, 1fr); }
+  .lore-body { padding: 44px 38px; }
+}
+@media (max-width: 720px) {
+  .start-grid { grid-template-columns: 1fr; gap: 14px; }
+  .start-card { padding: 26px 22px; }
+  .class-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .class-body { margin-top: -46px; padding: 0 14px 16px; }
+  .class-body h3 { font-size: 18px; }
+  .class-body p { font-size: 12px; }
+  .archive-grid { grid-template-columns: 1fr; }
+  .archive-card { padding: 22px 22px 18px; }
+  .lore-body { padding: 32px 24px; }
+  .lore-body p { font-size: 15px; line-height: 1.95; }
+  .lore-lead { font-size: 18px !important; }
+  .lore-turn { font-size: 17px !important; }
+  .lore-seal b { font-size: 18px; }
+}

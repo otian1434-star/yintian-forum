@@ -20,6 +20,20 @@
     }
   });
 
+  // 職業卡：滑鼠移入播放動態展示，移出歸零（手機無 hover，維持靜態縮圖）
+  document.querySelectorAll(".class-card").forEach((card) => {
+    const video = card.querySelector("video");
+    if (!video) return;
+    card.addEventListener("mouseenter", () => {
+      const played = video.play();
+      if (played && played.catch) played.catch(() => {});
+    });
+    card.addEventListener("mouseleave", () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+
   const toggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".nav-links");
   toggle?.addEventListener("click", () => {

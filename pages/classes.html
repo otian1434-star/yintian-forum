@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="../assets/media/brand-mark.svg">
+<meta name="theme-color" content="#0b0a08">
+<meta name="description" content="胤天天堂七大職業介紹：王族、騎士、妖精、法師、黑暗妖精、龍騎士、幻術師的定位、特色與養成方向。">
+<title>職業介紹 - 胤天天堂</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/yintian-theme.css">
+<script src="../config.js"></script>
+<style>
+  .cls-nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 28px; }
+  .cls-nav a { padding: 9px 18px; border: 1px solid rgba(185,138,79,.45); border-radius: 4px; color: #e0c799; font-size: .92em; font-weight: bold; letter-spacing: .06em; transition: background .2s, border-color .2s, color .2s; }
+  .cls-nav a:hover { background: rgba(185,138,79,.16); border-color: #c9a96e; color: #f4e4bc; }
+
+  .cls-block { display: grid; grid-template-columns: 300px 1fr; gap: 32px; align-items: start; scroll-margin-top: 90px; }
+  .cls-figure { border: 1px solid rgba(185,138,79,.45); overflow: hidden; background: #0d0a07; box-shadow: 0 12px 30px rgba(0,0,0,.42); }
+  .cls-figure img { display: block; width: 100%; height: auto; }
+  .cls-figure video { display: block; width: 100%; height: auto; }
+  .cls-en { color: #9f7650; font-size: .78em; font-weight: bold; letter-spacing: .28em; }
+  .cls-name { margin: 6px 0 14px; color: #f4e4bc; font-size: 1.9em; letter-spacing: .08em; }
+  .cls-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .cls-tag { padding: 4px 12px; border: 1px solid rgba(185,138,79,.5); border-radius: 999px; color: #c9a96e; font-size: .8em; letter-spacing: .05em; }
+  .cls-desc { color: #bcae95; line-height: 2; margin: 0 0 16px; }
+  .cls-meta { border-top: 1px solid rgba(185,138,79,.22); padding-top: 14px; }
+  .cls-meta dl { display: grid; grid-template-columns: 96px 1fr; gap: 10px 14px; margin: 0; }
+  .cls-meta dt { color: #9f7650; font-size: .88em; font-weight: bold; letter-spacing: .05em; }
+  .cls-meta dd { margin: 0; color: #d6c7a8; font-size: .92em; line-height: 1.8; }
+
+  @media (max-width: 860px) {
+    .cls-block { grid-template-columns: 1fr; gap: 20px; }
+    .cls-figure { max-width: 340px; margin: 0 auto; }
+    .cls-name { font-size: 1.6em; }
+    .cls-meta dl { grid-template-columns: 84px 1fr; }
+  }
+</style>
+</head>
+<body>
+<div id="header-slot"></div>
+<div id="main-wrap">
+<div id="page-content">
+
+  <div class="page-hdr">
+    <h1>⚔️ 職業介紹</h1>
+    <p>七條血脈，七種戰場位置。選一條，走到底。</p>
+  </div>
+
+  <div class="content-card">
+    <nav class="cls-nav" aria-label="職業快速跳轉">
+      <a href="#royal">王族</a>
+      <a href="#knight">騎士</a>
+      <a href="#elf">妖精</a>
+      <a href="#wizard">法師</a>
+      <a href="#dark-elf">黑暗妖精</a>
+      <a href="#dragon-knight">龍騎士</a>
+      <a href="#illusionist">幻術師</a>
+    </nav>
+    <p style="text-align:center;color:#a99980;margin:0;line-height:1.9;">
+      胤天為 <strong style="color:#c9a96e;">3.81 內掛版</strong>，玩家等級上限 55 級。<br>
+      以下為各職業的戰場定位與養成方向，<strong style="color:#c9a96e;">實際技能數值以遊戲內為準</strong>。
+    </p>
+  </div>
+
+  <div class="content-card" id="royal">
+    <div class="cls-block">
+      <div class="cls-figure">
+        <video muted loop playsinline controls preload="none" poster="../assets/media/classes/thumbs/royal.jpg">
+          <source src="../assets/media/classes/royal.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <span class="cls-en">ROYAL</span>
+        <h2 class="cls-name">王族</h2>
+        <div class="cls-tags"><span class="cls-tag">血盟核心</span><span class="cls-tag">統御增益</span><span class="cls-tag">開城建盟</span></div>
+        <p class="cls-desc">
+          唯一能建立血盟、發起攻城的血脈。王族的價值不在單體輸出，而在把散落的人聚成一支能打的隊伍——
+          增益技能拉滿全員狀態，君王專屬能力決定整場戰役的節奏。
+          在胤天，王座是空的，但要坐上去，得先有人願意跟著你走。
+        </p>
+        <div class="cls-meta">
+          <dl>
+            <dt>戰場定位</dt><dd>指揮官／團隊增益核心</dd>
+            <dt>主要能力</dt><dd>血盟建立、攻城發起、群體增益、君王專屬技</dd>
+            <dt>適合玩家</dt><dd>喜歡帶隊、經營人際、主導戰局的玩家</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-card" id="knight">
+    <div class="cls-block">
+      <div class="cls-figure">
+        <video muted loop playsinline controls preload="none" poster="../assets/media/classes/thumbs/knight.jpg">
+          <source src="../assets/media/classes/knight.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <span class="cls-en">KNIGHT</span>
+        <h2 class="cls-name">騎士</h2>
+        <div class="cls-tags"><span class="cls-tag">最強肉盾</span><span class="cls-tag">前排開場</span><span class="cls-tag">扛王主力</span></div>
+        <p class="cls-desc">
+          全職業最高的血量與物理防禦。打王時第一個進場、最後一個倒下，
+          盟戰時負責撕開對方陣型讓後排跟上。
+          騎士的強不在數字漂亮，而在你敢站在最前面——沒有騎士頂住，後面的火力都是空談。
+        </p>
+        <div class="cls-meta">
+          <dl>
+            <dt>戰場定位</dt><dd>前排坦克／衝鋒開場</dd>
+            <dt>主要能力</dt><dd>高血量、高物防、近戰持續輸出、控場衝撞</dd>
+            <dt>適合玩家</dt><dd>喜歡正面對抗、打王站樁、扛住壓力的玩家</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-card" id="elf">
+    <div class="cls-block">
+      <div class="cls-figure">
+        <video muted loop playsinline controls preload="none" poster="../assets/media/classes/thumbs/elf.jpg">
+          <source src="../assets/media/classes/elf.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <span class="cls-en">ELF</span>
+        <h2 class="cls-name">妖精</h2>
+        <div class="cls-tags"><span class="cls-tag">全能萬用</span><span class="cls-tag">遠程輸出</span><span class="cls-tag">輔助解除</span></div>
+        <p class="cls-desc">
+          弓箭遠攻、輔助魔法、狀態解除一手包辦，是戰場上適應力最高的血脈。
+          單人拓荒時能自己撐場，團戰時能補位任何缺口。
+          沒有哪一項是全服第一，但少了妖精的隊伍，總會在某個環節卡住。
+        </p>
+        <div class="cls-meta">
+          <dl>
+            <dt>戰場定位</dt><dd>遠程輸出／萬用補位</dd>
+            <dt>主要能力</dt><dd>弓箭攻擊、屬性魔法、狀態解除、輔助增益</dd>
+            <dt>適合玩家</dt><dd>喜歡單人也能玩、團隊也吃香的全能路線</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-card" id="wizard">
+    <div class="cls-block">
+      <div class="cls-figure">
+        <video muted loop playsinline controls preload="none" poster="../assets/media/classes/thumbs/wizard.jpg">
+          <source src="../assets/media/classes/wizard.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <span class="cls-en">WIZARD</span>
+        <h2 class="cls-name">法師</h2>
+        <div class="cls-tags"><span class="cls-tag">範圍爆發</span><span class="cls-tag">清怪效率</span><span class="cls-tag">召喚系統</span></div>
+        <p class="cls-desc">
+          群體攻擊魔法讓法師成為練功與清場效率的天花板，
+          搭配<a href="features-mage-summon.html" style="color:#c9a96e;">法師召喚系統</a>還能讓召喚獸替你扛前排。
+          缺點是身板脆——站錯位置，一輪就下去。強度和風險成正比。
+        </p>
+        <div class="cls-meta">
+          <dl>
+            <dt>戰場定位</dt><dd>後排範圍火力／清怪主力</dd>
+            <dt>主要能力</dt><dd>群體攻擊魔法、召喚獸、屬性魔法、遠距壓制</dd>
+            <dt>適合玩家</dt><dd>追求刷怪效率、喜歡大範圍爆發的玩家</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-card" id="dark-elf">
+    <div class="cls-block">
+      <div class="cls-figure">
+        <video muted loop playsinline controls preload="none" poster="../assets/media/classes/thumbs/dark-elf.jpg">
+          <source src="../assets/media/classes/dark-elf.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <span class="cls-en">DARK ELF</span>
+        <h2 class="cls-name">黑暗妖精</h2>
+        <div class="cls-tags"><span class="cls-tag">高爆發</span><span class="cls-tag">切入收割</span><span class="cls-tag">機動刺客</span></div>
+        <p class="cls-desc">
+          單體爆發最高的血脈，專門處理後排。
+          在混戰裡找到那個血最少的目標，切進去、帶走、退出來——整個過程不會超過幾秒。
+          玩黑妖不比誰站得久，比誰抓時機抓得準。
+        </p>
+        <div class="cls-meta">
+          <dl>
+            <dt>戰場定位</dt><dd>刺客／後排收割</dd>
+            <dt>主要能力</dt><dd>高單體爆發、機動切入、暗殺技能</dd>
+            <dt>適合玩家</dt><dd>喜歡抓時機、瞬間決勝負、PK 導向的玩家</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-card" id="dragon-knight">
+    <div class="cls-block">
+      <div class="cls-figure">
+        <video muted loop playsinline controls preload="none" poster="../assets/media/classes/thumbs/dragon-knight.jpg">
+          <source src="../assets/media/classes/dragon-knight.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <span class="cls-en">DRAGON KNIGHT</span>
+        <h2 class="cls-name">龍騎士</h2>
+        <div class="cls-tags"><span class="cls-tag">攻守兼備</span><span class="cls-tag">龍血之力</span><span class="cls-tag">戰場中堅</span></div>
+        <p class="cls-desc">
+          承接龍血的戰士，兼具接近騎士的耐打與可觀的範圍輸出。
+          不像騎士那樣純粹扛傷，也不像法師那樣脆，
+          是那種放在隊伍任何位置都不會浪費的中堅——尤其在<a href="items-dragon-eye.html" style="color:#c9a96e;">四龍之魔眼</a>成型之後。
+        </p>
+        <div class="cls-meta">
+          <dl>
+            <dt>戰場定位</dt><dd>半坦輸出／戰場中堅</dd>
+            <dt>主要能力</dt><dd>龍血強化、範圍攻擊、高耐久近戰</dd>
+            <dt>適合玩家</dt><dd>不想選純坦也不想太脆、追求平衡的玩家</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-card" id="illusionist">
+    <div class="cls-block">
+      <div class="cls-figure">
+        <video muted loop playsinline controls preload="none" poster="../assets/media/classes/thumbs/illusionist.jpg">
+          <source src="../assets/media/classes/illusionist.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <span class="cls-en">ILLUSIONIST</span>
+        <h2 class="cls-name">幻術師</h2>
+        <div class="cls-tags"><span class="cls-tag">控場</span><span class="cls-tag">團隊增益</span><span class="cls-tag">幻影術者</span></div>
+        <p class="cls-desc">
+          以幻術操控戰場的血脈。控制、增益、削弱一應俱全，
+          是那種存在感不靠傷害數字、但少了就整團打不動的角色。
+          盟戰時一個關鍵控場，價值遠超過多打的那幾千點傷害。
+        </p>
+        <div class="cls-meta">
+          <dl>
+            <dt>戰場定位</dt><dd>控場／團隊增益</dd>
+            <dt>主要能力</dt><dd>幻術控制、群體增益、狀態削弱、輔助召喚</dd>
+            <dt>適合玩家</dt><dd>喜歡運籌帷幄、以團隊貢獻取勝的玩家</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-card" style="text-align:center;">
+    <h2 style="color:#c9a96e;margin:0 0 14px;">選好了嗎？</h2>
+    <p style="color:#a99980;margin:0 0 22px;line-height:1.9;">
+      2026/08/14（五）20:00 開機。<br>
+      建議開機前先看過<a href="features-newbie-guide.html" style="color:#c9a96e;">新手引導</a>與<a href="features-level-rewards.html" style="color:#c9a96e;">各職業等級獎勵</a>，起手不走冤枉路。
+    </p>
+    <a href="download.html" class="form-submit" style="display:inline-block;max-width:280px;">📥 前往下載遊戲</a>
+  </div>
+
+</div>
+</div>
+<div id="footer-slot"></div>
+<script src="../assets/js/forum.js"></script>
+</body>
+</html>
