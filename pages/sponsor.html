@@ -55,31 +55,37 @@
 
 <div class="content-card">
   <h2 style="color:var(--gold);border-bottom:1px solid rgba(212,175,55,0.3);padding-bottom:12px;margin-top:0;">👑 VIP 等級能力表</h2>
+  <div style="background:rgba(212,175,55,0.08);border:1px solid rgba(212,175,55,0.25);border-radius:6px;padding:14px 16px;margin-bottom:16px;color:var(--text-secondary);font-size:0.92em;line-height:1.7;">
+    💡 <strong style="color:var(--gold);">VIP 由「商城消費紅利」逐階合成，與贊助金額多寡無關。</strong><br>
+    藍鑽不論從任何管道取得，只要在商城消費即可獲得紅利；紅利需<strong style="color:var(--gold);">一階一階往上合成</strong>，因此實際門檻為各階累加。<br>
+    例如升到 <span style="color:#88cc88;font-weight:bold;">VIP 3</span> 需要 <span style="color:var(--gold);">1,000 ＋ 3,000 ＋ 6,000 ＝ 10,000</span> 紅利（即下表「累計投入紅利」欄）。
+  </div>
   <div class="table-wrap">
     <table class="data-table" style="font-size:0.85em;">
       <thead>
         <tr>
           <th>VIP 等級</th>
-          <th>累計贊助 (NT)</th>
+          <th>本階合成紅利</th>
+          <th>累計投入紅利</th>
           <th>能力加成</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td style="color:#aaa;">VIP 1</td><td>1,000</td><td>HP+40, MP+20, 經驗+2%</td></tr>
-        <tr><td style="color:#88cc88;">VIP 2</td><td>3,000</td><td>防-1, HP+60, MP+30, 經驗+4%</td></tr>
-        <tr><td style="color:#88cc88;">VIP 3</td><td>6,000</td><td>防-1, HP+80, MP+40, 經驗+6%, 體魔回+1</td></tr>
-        <tr><td style="color:#66aaff;">VIP 4</td><td>10,000</td><td>防-1, 額攻+1, HP+100, MP+50, 經驗+8%, 體魔回+1</td></tr>
-        <tr><td style="color:#66aaff;">VIP 5</td><td>20,000</td><td>防-2, 額攻+1, HP+120, MP+60, 經驗+10%, 體魔回+2</td></tr>
-        <tr><td style="color:#aa66ff;">VIP 6</td><td>30,000</td><td>防-2, 額攻+2, 力敏智+1, HP+160, MP+70, 經驗+11%, 體魔回+2, 減傷+1</td></tr>
-        <tr><td style="color:#aa66ff;">VIP 7</td><td>40,000</td><td>防-3, 額攻+5, 力敏智+1, HP+180, MP+80, 經驗+12%, 體魔回+2, 減傷+1</td></tr>
-        <tr><td style="color:#ff9944;">VIP 8</td><td>50,000</td><td>防-4, 額攻+5, 力敏智+1, HP+200, MP+90, 經驗+13%, 體魔回+3, 減傷+2</td></tr>
-        <tr><td style="color:#ff9944;">VIP 9</td><td>60,000</td><td>防-5, 額攻+7, 力敏智+1, HP+220, MP+100, 經驗+14%, 體魔回+4, 減傷+3</td></tr>
-        <tr><td style="color:#ffd700;font-weight:bold;">VIP 10</td><td>80,000</td><td>防-8, 額攻+9, 力敏智+2, HP+250, MP+150, 經驗+20%, 體魔回+5, 減傷+4</td></tr>
-        <tr><td style="color:#ffd700;font-weight:bold;">VIP 11</td><td>90,000</td><td>防-10, 額攻+11, 力敏智+3, HP+500, MP+300, 經驗+25%, 體魔回+6, 減傷+5</td></tr>
-        <tr><td style="color:#ffd700;font-weight:bold;">VIP 12</td><td>100,000</td><td>防-12, 額攻+12, 力敏智+3, HP+600, MP+350, 經驗+26%, 體魔回+8, 減傷+6</td></tr>
-        <tr><td style="color:#ffd700;font-weight:bold;">VIP 13</td><td>110,000</td><td>防-14, 額攻+13, 力敏智+3, HP+700, MP+400, 經驗+27%, 體魔回+10, 減傷+7</td></tr>
-        <tr><td style="color:#ffd700;font-weight:bold;">VIP 14</td><td>120,000</td><td>防-16, 額攻+14, 力敏智+4, HP+800, MP+450, 經驗+28%, 體魔回+12, 減傷+8</td></tr>
-        <tr style="background:rgba(212,175,55,0.15);"><td style="color:#ffd700;font-weight:bold;">VIP 15</td><td>130,000</td><td>防-18, 額攻+15, 力敏智+4, HP+900, MP+500, 經驗+30%, 體魔回+14, 減傷+10</td></tr>
+        <tr><td style="color:#aaa;">VIP 1</td><td>1,000</td><td style="color:var(--gold);">1,000</td><td>HP+40, MP+20, 經驗+2%</td></tr>
+        <tr><td style="color:#88cc88;">VIP 2</td><td>3,000</td><td style="color:var(--gold);">4,000</td><td>防-1, HP+60, MP+30, 經驗+4%</td></tr>
+        <tr><td style="color:#88cc88;">VIP 3</td><td>6,000</td><td style="color:var(--gold);">10,000</td><td>防-1, HP+80, MP+40, 經驗+6%, 體魔回+1</td></tr>
+        <tr><td style="color:#66aaff;">VIP 4</td><td>10,000</td><td style="color:var(--gold);">20,000</td><td>防-1, 額攻+1, HP+100, MP+50, 經驗+8%, 體魔回+1</td></tr>
+        <tr><td style="color:#66aaff;">VIP 5</td><td>20,000</td><td style="color:var(--gold);">40,000</td><td>防-2, 額攻+1, HP+120, MP+60, 經驗+10%, 體魔回+2</td></tr>
+        <tr><td style="color:#aa66ff;">VIP 6</td><td>30,000</td><td style="color:var(--gold);">70,000</td><td>防-2, 額攻+2, 力敏智+1, HP+160, MP+70, 經驗+11%, 體魔回+2, 減傷+1</td></tr>
+        <tr><td style="color:#aa66ff;">VIP 7</td><td>40,000</td><td style="color:var(--gold);">110,000</td><td>防-3, 額攻+5, 力敏智+1, HP+180, MP+80, 經驗+12%, 體魔回+2, 減傷+1</td></tr>
+        <tr><td style="color:#ff9944;">VIP 8</td><td>50,000</td><td style="color:var(--gold);">160,000</td><td>防-4, 額攻+5, 力敏智+1, HP+200, MP+90, 經驗+13%, 體魔回+3, 減傷+2</td></tr>
+        <tr><td style="color:#ff9944;">VIP 9</td><td>60,000</td><td style="color:var(--gold);">220,000</td><td>防-5, 額攻+7, 力敏智+1, HP+220, MP+100, 經驗+14%, 體魔回+4, 減傷+3</td></tr>
+        <tr><td style="color:#ffd700;font-weight:bold;">VIP 10</td><td>80,000</td><td style="color:var(--gold);">300,000</td><td>防-8, 額攻+9, 力敏智+2, HP+250, MP+150, 經驗+20%, 體魔回+5, 減傷+4</td></tr>
+        <tr><td style="color:#ffd700;font-weight:bold;">VIP 11</td><td>90,000</td><td style="color:var(--gold);">390,000</td><td>防-10, 額攻+11, 力敏智+3, HP+500, MP+300, 經驗+25%, 體魔回+6, 減傷+5</td></tr>
+        <tr><td style="color:#ffd700;font-weight:bold;">VIP 12</td><td>100,000</td><td style="color:var(--gold);">490,000</td><td>防-12, 額攻+12, 力敏智+3, HP+600, MP+350, 經驗+26%, 體魔回+8, 減傷+6</td></tr>
+        <tr><td style="color:#ffd700;font-weight:bold;">VIP 13</td><td>110,000</td><td style="color:var(--gold);">600,000</td><td>防-14, 額攻+13, 力敏智+3, HP+700, MP+400, 經驗+27%, 體魔回+10, 減傷+7</td></tr>
+        <tr><td style="color:#ffd700;font-weight:bold;">VIP 14</td><td>120,000</td><td style="color:var(--gold);">720,000</td><td>防-16, 額攻+14, 力敏智+4, HP+800, MP+450, 經驗+28%, 體魔回+12, 減傷+8</td></tr>
+        <tr style="background:rgba(212,175,55,0.15);"><td style="color:#ffd700;font-weight:bold;">VIP 15</td><td>130,000</td><td style="color:var(--gold);font-weight:bold;">850,000</td><td>防-18, 額攻+15, 力敏智+4, HP+900, MP+500, 經驗+30%, 體魔回+14, 減傷+10</td></tr>
       </tbody>
     </table>
   </div>
