@@ -13,7 +13,7 @@ const FORUM_CONFIG = {
   heroImage: "assets/media/hero-characters.png",
   brandLogo: "assets/media/yintian-official-logo.png",
 
-  lineOfficial: YINTIAN_PENDING_LINK,
+  lineOfficial: "https://lin.ee/vITIxze",
   lineCommunity: YINTIAN_PENDING_LINK,
   lineId: "籌備中",
   teamName: "胤天天堂管理團隊",
@@ -74,7 +74,7 @@ window.YINTIAN_CONFIG = {
   version: FORUM_CONFIG.serverVersion,
   slogan: FORUM_CONFIG.forumSlogan,
   openingDate: "開服日期籌備中",
-  lineUrl: YINTIAN_PENDING_LINK,
+  lineUrl: FORUM_CONFIG.lineOfficial,
   lineId: FORUM_CONFIG.lineId,
   downloadUrl: YINTIAN_PENDING_LINK,
 };

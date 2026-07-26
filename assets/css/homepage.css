@@ -249,6 +249,10 @@ img { max-width: 100%; display: block; }
 .bloodline-mark { padding: 45px; border: 1px solid var(--line); background: radial-gradient(circle, rgba(57,76,96,.24), transparent 66%); }
 .bloodline-copy blockquote { margin: 25px 0 0; padding-left: 24px; border-left: 2px solid var(--gold-dark); color: #c4c5c3; font: 500 20px/1.9 var(--font-title); letter-spacing: .08em; }
 
+.partner-card { display: grid; grid-template-columns: 1fr auto; gap: 46px; align-items: center; padding: 46px 52px; }
+.partner-card h3 { margin: 16px 0 12px; color: var(--gold-bright); font: 700 27px var(--font-title); letter-spacing: .08em; }
+.partner-card p { max-width: 640px; margin: 0; color: #9298a0; font-size: 14px; line-height: 1.9; }
+
 .site-footer { padding: 54px 22px; border-top: 1px solid var(--line); color: #777f88; text-align: center; font-size: 12px; letter-spacing: .08em; background: #05070b; }
 .site-footer strong { color: var(--gold); font-family: var(--font-title); }
 
@@ -300,6 +304,8 @@ img { max-width: 100%; display: block; }
   .feature-card h3 { margin-top: 28px; }
   .bloodline { grid-template-columns: 1fr; gap: 34px; }
   .bloodline-mark { width: min(330px,100%); margin: auto; }
+  .partner-card { grid-template-columns: 1fr; gap: 26px; padding: 32px 25px; }
+  .partner-card h3 { font-size: 22px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
