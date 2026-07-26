@@ -342,7 +342,7 @@
           <div class="footer-col-title">⚔️ ${C.forumName}</div>
           <ul class="footer-links">
             <li><span style="color:var(--text-muted);font-size:12px;">${C.forumSlogan || '胤天天堂'}</span></li>
-            ${communityLink ? `<li><a href="${communityLink}" target="_blank" rel="noopener">💬 玩家討論區</a></li>` : ''}
+            ${communityLink ? `<li><a href="${communityLink}" target="_blank" rel="noopener">💬 ${escapeHTML(C.lineCommunityName || '玩家討論區')}</a></li>` : ''}
             ${officialReady
               ? `<li><a href="${C.lineOfficial}" target="_blank" rel="noopener">LINE 官方客服</a></li>`
               : '<li><span class="service-pending">LINE 專屬帳號籌備中</span></li>'}

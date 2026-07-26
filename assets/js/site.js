@@ -20,6 +20,17 @@
     }
   });
 
+  document.querySelectorAll("[data-community-link]").forEach((link) => {
+    const url = config.communityUrl;
+    if (url && url !== "#" && url !== "#service-pending") {
+      link.href = url;
+      link.target = "_blank";
+      link.rel = "noopener";
+    } else {
+      link.href = config.lineUrl || "#";
+    }
+  });
+
   // 職業卡：滑鼠移入播放動態展示，移出歸零（手機無 hover，維持靜態縮圖）
   document.querySelectorAll(".class-card").forEach((card) => {
     const video = card.querySelector("video");

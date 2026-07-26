@@ -50,7 +50,12 @@
 <div id="footer-slot"></div>
 <script src="../assets/js/forum.js"></script>
 <script>
-document.getElementById('faq-footer-info').textContent = FORUM_CONFIG.teamName + ' 敬啟 | 客服 ID：' + FORUM_CONFIG.lineId;
+(function () {
+  var id = FORUM_CONFIG.lineId;
+  var hasId = id && id !== '籌備中';
+  document.getElementById('faq-footer-info').textContent =
+    FORUM_CONFIG.teamName + ' 敬啟｜' + (hasId ? '客服 ID：' + id : '客服請洽官方 LINE');
+})();
 </script>
 </body>
 </html>

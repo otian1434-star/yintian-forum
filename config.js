@@ -14,7 +14,8 @@ const FORUM_CONFIG = {
   brandLogo: "assets/media/yintian-official-logo.png",
 
   lineOfficial: "https://lin.ee/vITIxze",
-  lineCommunity: YINTIAN_PENDING_LINK,
+  lineCommunity: "https://line.me/ti/g2/DW7sRT2ayxamyhEdUFUFxJCfQCGOZeuacrxnqA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default",
+  lineCommunityName: "胤天381內掛討論區",
   lineId: "籌備中",
   teamName: "胤天天堂管理團隊",
 
@@ -75,6 +76,8 @@ window.YINTIAN_CONFIG = {
   slogan: FORUM_CONFIG.forumSlogan,
   openingDate: "2026/08/14（五）20:00 開機",
   lineUrl: FORUM_CONFIG.lineOfficial,
+  communityUrl: FORUM_CONFIG.lineCommunity,
+  communityName: FORUM_CONFIG.lineCommunityName,
   lineId: FORUM_CONFIG.lineId,
   downloadUrl: YINTIAN_PENDING_LINK,
 };
