@@ -64,7 +64,7 @@ const FORUM_CONFIG = {
   heroBadges: [
     "✦ 3.81 內掛版",
     "⚔ 正統版本節奏",
-    "⌛ 開服資訊籌備中"
+    "🔥 08/14（五）20:00 開機"
   ],
 };
 
@@ -73,7 +73,7 @@ window.YINTIAN_CONFIG = {
   productName: "天堂",
   version: FORUM_CONFIG.serverVersion,
   slogan: FORUM_CONFIG.forumSlogan,
-  openingDate: "開服日期籌備中",
+  openingDate: "2026/08/14（五）20:00 開機",
   lineUrl: FORUM_CONFIG.lineOfficial,
   lineId: FORUM_CONFIG.lineId,
   downloadUrl: YINTIAN_PENDING_LINK,

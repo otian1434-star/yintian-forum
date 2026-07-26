@@ -18,13 +18,13 @@
   ],
   "serverCards": [
     {
-      "title": "胤天天堂｜籌備中",
+      "title": "胤天天堂｜08/14 開機",
       "subtitle": "ORTHODOX BLOODLINE · 3.81",
       "rows": [
         { "label": "版本", "value": "3.81 內掛版", "highlight": true },
-        { "label": "經驗倍率", "value": "× 3（內掛 × 1）", "highlight": true },
-        { "label": "掉落倍率", "value": "× 1" },
-        { "label": "金幣倍率", "value": "× 1" },
+        { "label": "經驗倍率", "value": "× 9（內掛 × 1）", "highlight": true },
+        { "label": "掉落倍率", "value": "× 3" },
+        { "label": "金幣倍率", "value": "× 3" },
         { "label": "多開限制", "value": "IP 限制 3 開" },
         { "label": "角色限制", "value": "每帳號可創 4 隻" },
         { "label": "公頻發話", "value": "Lv.10 以上" },
