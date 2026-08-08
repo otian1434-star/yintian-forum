@@ -112,6 +112,8 @@
             <a href="${r}pages/equipment-arrogance-gem.html">💎 傲慢寶石</a>
             <a href="${r}pages/equipment-hero-badge.html">🛡️ 勇者徽章</a>
             <a href="${r}pages/equipment-fishing-talisman.html">🎣 釣魚護符</a>
+            <a href="${r}pages/features-domination-tower.html">🗼 支配之塔</a>
+            <a href="${r}pages/features-zodiac.html">♈ 黃道12宮介紹</a>
             <a href="${r}pages/features-transform-fusion.html">🎭 變身卡合成</a>
             <div class="nav-dd-divider"></div>
             <div class="nav-dd-label">裝備道具</div>
@@ -130,6 +132,7 @@
             <a href="${r}pages/armor-stat-shirt.html">👕 能力內衣</a>
             <a href="${r}pages/armor-stat-boots.html">🥾 能力長靴</a>
             <a href="${r}pages/armor-special-shield.html">🛡️ 特殊臂盾介紹</a>
+            <a href="${r}pages/armor-shoulder-guard.html">🎖️ 左右肩甲介紹</a>
             <a href="${r}pages/items-overview.html">🎒 道具列表</a>
             <div class="nav-dd-divider"></div>
             <div class="nav-dd-label">圖鑑</div>
@@ -216,6 +219,8 @@
       <a class="mob-link mob-sub" href="${r}pages/equipment-arrogance-gem.html">💎 傲慢寶石</a>
       <a class="mob-link mob-sub" href="${r}pages/equipment-hero-badge.html">🛡️ 勇者徽章</a>
       <a class="mob-link mob-sub" href="${r}pages/equipment-fishing-talisman.html">🎣 釣魚護符</a>
+      <a class="mob-link mob-sub" href="${r}pages/features-domination-tower.html">🗼 支配之塔</a>
+      <a class="mob-link mob-sub" href="${r}pages/features-zodiac.html">♈ 黃道12宮介紹</a>
       <a class="mob-link mob-sub" href="${r}pages/features-transform-fusion.html">🎭 變身卡合成</a>
 
       <div class="mob-section">裝備道具</div>
@@ -234,6 +239,7 @@
       <a class="mob-link mob-sub" href="${r}pages/armor-stat-shirt.html">👕 能力內衣</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-stat-boots.html">🥾 能力長靴</a>
       <a class="mob-link mob-sub" href="${r}pages/armor-special-shield.html">🛡️ 特殊臂盾介紹</a>
+      <a class="mob-link mob-sub" href="${r}pages/armor-shoulder-guard.html">🎖️ 左右肩甲介紹</a>
       <a class="mob-link mob-sub" href="${r}pages/items-overview.html">🎒 道具列表</a>
       <a class="mob-link mob-sub" href="${r}pages/items-dragon-eye.html">👁️ 四龍之魔眼</a>
       <a class="mob-link mob-sub" href="${r}pages/items-candle.html">🕯️ 回憶蠟燭</a>

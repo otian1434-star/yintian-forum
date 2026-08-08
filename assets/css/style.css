@@ -5516,3 +5516,146 @@ img { max-width: 100%; display: block; }
   .btn-line-o, .btn-line-c, .btn-register, .btn-admin { display: none; }
   .btn-admin { display: none; }
 }
+/* 左右肩甲 */
+.shoulder-guard-page .content-card { margin-bottom: 22px; }
+.shoulder-guard-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(159,200,240,0.18), transparent 32%),
+    radial-gradient(circle at 86% 6%, rgba(201,169,110,0.2), transparent 34%),
+    linear-gradient(135deg, rgba(18,22,32,0.92), rgba(31,25,16,0.9)),
+    var(--bg3);
+}
+.shoulder-guard-hero h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 4px;
+}
+.shoulder-guard-hero p { max-width: 880px; color: rgba(232,222,202,0.92); }
+.shoulder-guard-hero strong { color: var(--gold-light); }
+.shoulder-rate-table {
+  min-width: 620px;
+  table-layout: fixed;
+}
+.shoulder-rate-table th,
+.shoulder-rate-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+.shoulder-rate-table td:nth-child(odd) {
+  color: var(--gold-light);
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.shoulder-side-card {
+  --side-color: var(--gold-light);
+  border-color: color-mix(in srgb, var(--side-color) 46%, transparent);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--side-color) 14%, transparent), rgba(8,7,5,0.16)),
+    var(--bg3);
+}
+.shoulder-side-card h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  color: var(--side-color);
+}
+.shoulder-side-card p { margin-bottom: 0; color: var(--text-muted); }
+.shoulder-side-card.left { --side-color: #efb174; }
+.shoulder-side-card.right { --side-color: #9fc8f0; }
+.shoulder-ability-table {
+  --sg-color: var(--gold-light);
+  min-width: 620px;
+}
+.shoulder-ability-table th:first-child,
+.shoulder-ability-table td:first-child {
+  width: 18%;
+  text-align: center;
+  font-family: 'Noto Serif TC', serif;
+  letter-spacing: 1px;
+}
+.shoulder-ability-table td:nth-child(2) {
+  color: var(--sg-color);
+  font-weight: 700;
+}
+.shoulder-ability-table.fighter { --sg-color: #ef7b73; }
+.shoulder-ability-table.archer { --sg-color: #68d08a; }
+.shoulder-ability-table.sage { --sg-color: #c68cff; }
+.shoulder-ability-table.tank { --sg-color: #e8c16a; }
+.shoulder-ability-table.hp { --sg-color: #ef9a92; }
+.shoulder-ability-table.ac { --sg-color: #d7c9a8; }
+.shoulder-ability-table.mr { --sg-color: #9fc8f0; }
+.shoulder-ability-table.pvp { --sg-color: #f0b08c; }
+
+/* 黃道十二宮 */
+.zodiac-page .content-card { margin-bottom: 22px; }
+.zodiac-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 14% 10%, rgba(198,140,255,0.2), transparent 32%),
+    radial-gradient(circle at 86% 6%, rgba(201,169,110,0.2), transparent 34%),
+    linear-gradient(135deg, rgba(24,16,38,0.92), rgba(31,25,16,0.9)),
+    var(--bg3);
+}
+.zodiac-hero h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 4px;
+}
+.zodiac-hero p { max-width: 880px; color: rgba(232,222,202,0.92); }
+.zodiac-hero strong { color: var(--gold-light); }
+.zodiac-stone-table td:first-child,
+.zodiac-sign-table td:first-child,
+.zodiac-final-table td:first-child { width: 34%; }
+.zodiac-stone-table td:nth-child(2),
+.zodiac-sign-table td:nth-child(2) { color: #c68cff; font-weight: 700; }
+.zodiac-final-card {
+  border-color: rgba(201,169,110,0.46);
+  background:
+    linear-gradient(135deg, rgba(201,169,110,0.16), rgba(8,7,5,0.16)),
+    var(--bg3);
+}
+.zodiac-final-table td:nth-child(2) {
+  color: var(--gold-light);
+  font-weight: 800;
+}
+.zodiac-craft-table { min-width: 640px; }
+.zodiac-craft-table td:last-child { text-align: right; }
+.zodiac-craft-table tr.top td {
+  background: rgba(201,169,110,0.14);
+  color: var(--gold-light);
+  font-weight: 800;
+}
+
+/* 支配之塔 */
+.domination-tower-page .content-card { margin-bottom: 22px; }
+.domination-hero {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(104,208,138,0.16), transparent 32%),
+    radial-gradient(circle at 88% 4%, rgba(201,169,110,0.2), transparent 34%),
+    linear-gradient(135deg, rgba(14,26,20,0.92), rgba(31,25,16,0.9)),
+    var(--bg3);
+}
+.domination-hero h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 4px;
+}
+.domination-hero p { max-width: 880px; color: rgba(232,222,202,0.92); }
+.domination-hero strong { color: var(--gold-light); }
+.domination-entry-card strong { color: var(--gold-light); }
+.domination-soul-table td:first-child { width: 42%; }
+.domination-soul-table td:nth-child(2) { color: #68d08a; font-weight: 700; }
+.domination-upgrade-card {
+  border-color: rgba(239,123,115,0.42);
+  background:
+    linear-gradient(135deg, rgba(239,123,115,0.12), rgba(8,7,5,0.16)),
+    var(--bg3);
+}
+.domination-upgrade-card h2 { border-bottom: 0; padding-bottom: 0; color: #ef9a92; }
+.domination-upgrade-card p { margin-bottom: 0; }
+.domination-upgrade-card strong { color: var(--gold-light); }
