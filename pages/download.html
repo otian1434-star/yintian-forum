@@ -33,9 +33,10 @@ document.addEventListener('DOMContentLoaded', function() {
   var C = FORUM_CONFIG;
   var d = C.download;
   var downloadFiles = [
-    { label: 'ZIP', title: 'ZIP 壓縮檔', url: d.backup3 || d.mainUrl, note: '建議優先下載' },
-    { label: 'RAR', title: 'RAR 壓縮檔', url: d.backup1, note: '備用格式' },
-    { label: '7Z', title: '7Z 壓縮檔', url: d.backup2, note: '備用格式' }
+    { label: '載點一', title: '下載點一', url: d.mainUrl, note: '建議優先下載' },
+    { label: '載點二', title: '下載點二', url: d.backup1, note: '非 Google 載點' },
+    { label: '載點三', title: '下載點三', url: d.backup2, note: 'Google 雲端備援' },
+    { label: '備用', title: '備用載點', url: d.backup3, note: '前三個都失敗時使用' }
   ].filter(function(file) { return file.url; });
   var downloadButtons = downloadFiles.map(function(file) {
     return '<a href="' + file.url + '" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#2a2112;border:2px solid #ffd700;border-radius:10px;padding:18px 16px;color:#fff;text-align:center;box-shadow:0 0 16px rgba(255,215,0,0.22);">' +
@@ -60,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div style="text-align:center;margin-bottom:18px;">
         <strong style="color:#ffd700;font-size:1.55em;letter-spacing:2px;">胤天天堂主程式下載</strong>
         <p style="margin:8px 0 0;color:#f4e4bc;font-weight:bold;">更新日期：${d.updateDate || '籌備中'}</p>
-        <p style="margin:4px 0 0;color:#f4e4bc;">胤天專屬主程式完成後，將於此處提供獨立下載點。</p>
+        <p style="margin:4px 0 0;color:#f4e4bc;">四個載點內容相同，任選一個下載即可；若某個載點無法開啟，請改用其他載點。</p>
         <p style="margin:10px auto 0;color:#ffcc66;font-weight:bold;max-width:760px;">若有遇見閃退及卡頓問題 請洽官方獲取相容版本</p>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;">

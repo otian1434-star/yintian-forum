@@ -20,12 +20,12 @@ const FORUM_CONFIG = {
   teamName: "胤天天堂管理團隊",
 
   download: {
-    mainUrl: "",
-    backup1: "",
-    backup2: "",
-    backup3: "",
+    mainUrl: "https://drive.google.com/file/d/1EW7l9zh31lFnInee8T18D0F5GtP66-HF/view?usp=sharing",   // 下載點一
+    backup1: "https://disk.cloud-shield.app/s/UHn52x",                                               // 下載點二
+    backup2: "https://drive.google.com/file/d/1SO3xROODABPeyH3O53XJrKyBpCqUKSMU/view?usp=sharing",   // 下載點三
+    backup3: "https://drive.google.com/file/d/1njpBShZ2vOEsrSdhbElYUcvoTGY_4bRS/view?usp=sharing",   // 備用載點
     patchUrl: "",
-    updateDate: "籌備中",
+    updateDate: "2026/08/11",
     anyDeskUrl: "https://anydesk.com/zh-tw/downloads/windows",
   },
 
@@ -79,7 +79,7 @@ window.YINTIAN_CONFIG = {
   communityUrl: FORUM_CONFIG.lineCommunity,
   communityName: FORUM_CONFIG.lineCommunityName,
   lineId: FORUM_CONFIG.lineId,
-  downloadUrl: YINTIAN_PENDING_LINK,
+  downloadUrl: FORUM_CONFIG.download.mainUrl || YINTIAN_PENDING_LINK,
 };
 
 window.FORUM_CONFIG_READY = Promise.resolve(FORUM_CONFIG);
