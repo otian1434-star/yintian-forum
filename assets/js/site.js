@@ -51,4 +51,56 @@
     const open = nav?.classList.toggle("is-open") ?? false;
     toggle.setAttribute("aria-expanded", String(open));
   });
+
+  /* 首頁活動公告列表：以 data/posts.json 的「活動」分類為準，
+     HTML 內已有一份靜態備援，抓不到資料時維持原樣。 */
+  const eventFeatured = document.getElementById("event-featured");
+  const eventList = document.getElementById("event-list");
+  if (eventFeatured && eventList) {
+    const escapeHTML = (value) =>
+      String(value ?? "").replace(/[&<>"']/g, (c) =>
+        ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    const shortDate = (value) => {
+      const parts = String(value || "").split("/");
+      return parts.length === 3 ? `${parts[1]}/${parts[2]}` : String(value || "");
+    };
+    const stripEmoji = (value) => String(value || "").replace(/^[^一-龥A-Za-z0-9]+/, "").trim();
+    const badgeOf = (post) => {
+      const head = stripEmoji(post.title).split("──")[0].trim();
+      return head || post.category || "活動";
+    };
+    const titleOf = (post) => stripEmoji(post.title).replace(/\s*──\s*/, " ── ");
+
+    fetch("data/posts.json", { cache: "no-store" })
+      .then((res) => (res.ok ? res.json() : Promise.reject(new Error("posts not found"))))
+      .then((data) => {
+        const events = (data.posts || [])
+          .filter((post) => post.category === "活動" && post.published !== false)
+          .sort((a, b) => {
+            const endedA = a.status === "已結束" ? 1 : 0;
+            const endedB = b.status === "已結束" ? 1 : 0;
+            if (endedA !== endedB) return endedA - endedB;
+            if (!!a.pinned !== !!b.pinned) return a.pinned ? -1 : 1;
+            return String(b.date || "").localeCompare(String(a.date || ""));
+          });
+        if (!events.length) return;
+
+        const [first, ...rest] = events;
+        const setSlot = (attr, value) => {
+          const node = eventFeatured.querySelector(`[${attr}]`);
+          if (node) node.textContent = value;
+        };
+        setSlot("data-event-badge", badgeOf(first));
+        setSlot("data-event-title", titleOf(first));
+        setSlot("data-event-excerpt", first.excerpt || "");
+
+        eventList.innerHTML =
+          rest.slice(0, 3).map((post) =>
+            `<a class="news-item" href="pages/events.html"><time>${escapeHTML(shortDate(post.date))}</time>` +
+            `<strong>${escapeHTML(titleOf(post))}</strong></a>`
+          ).join("") +
+          '<a class="news-item" href="pages/events.html"><time>全部</time><strong>查看所有活動公告 →</strong></a>';
+      })
+      .catch(() => {});
+  }
 })();
