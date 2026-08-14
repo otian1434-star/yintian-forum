@@ -81,6 +81,8 @@ window.YINTIAN_CONFIG = {
   communityName: FORUM_CONFIG.lineCommunityName,
   lineId: FORUM_CONFIG.lineId,
   downloadUrl: FORUM_CONFIG.download.mainUrl || YINTIAN_PENDING_LINK,
+  sponsorUrl: FORUM_CONFIG.sponsorUrl || YINTIAN_PENDING_LINK,
+  promoReportUrl: FORUM_CONFIG.promoReportUrl || YINTIAN_PENDING_LINK,
 };
 
 window.FORUM_CONFIG_READY = Promise.resolve(FORUM_CONFIG);

@@ -20,6 +20,20 @@
     }
   });
 
+  /* 左右浮動快捷：連結一律以 config.js 為準，未設定就隱藏 */
+  [
+    ["[data-sponsor-link]", config.sponsorUrl],
+    ["[data-promo-report-link]", config.promoReportUrl],
+  ].forEach(([selector, url]) => {
+    document.querySelectorAll(selector).forEach((link) => {
+      if (url && url !== "#" && url !== "#service-pending") {
+        link.href = url;
+      } else {
+        link.remove();
+      }
+    });
+  });
+
   document.querySelectorAll("[data-community-link]").forEach((link) => {
     const url = config.communityUrl;
     if (url && url !== "#" && url !== "#service-pending") {

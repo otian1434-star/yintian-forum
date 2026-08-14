@@ -568,3 +568,78 @@ body {
   .lore-cta-btn { width: 100%; padding: 0 18px; font-size: 14px; letter-spacing: .06em; }
   .lore-cta-note { font-size: 12px; line-height: 1.7; }
 }
+
+/* ══════════════════════════════════════
+   首頁左右浮動快捷：自動贊助 / 推廣回報
+══════════════════════════════════════ */
+#home-side-actions { position: static; }
+.home-side-action {
+  position: fixed;
+  top: 50%;
+  z-index: 19;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 13px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--gold-bright);
+  text-decoration: none;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, .5);
+  backdrop-filter: blur(6px);
+  transition: transform .22s ease, background .22s ease, border-color .22s ease;
+}
+.home-side-action.is-sponsor { left: 0; border-left: 0; border-color: var(--gold-dark); }
+.home-side-action.is-report { right: 0; border-right: 0; }
+.home-side-icon { font-size: 22px; line-height: 1; }
+.home-side-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font: 700 15px var(--font-title);
+  letter-spacing: .22em;
+}
+.home-side-action.is-sponsor:hover {
+  background: rgba(195, 160, 100, .18);
+  border-color: var(--gold);
+  transform: translateY(-50%) translateX(5px);
+}
+.home-side-action.is-report:hover {
+  background: rgba(120, 144, 165, .18);
+  border-color: var(--steel);
+  transform: translateY(-50%) translateX(-5px);
+}
+.home-side-action:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 3px; }
+
+@media (max-width: 1050px) {
+  .home-side-action { padding: 16px 10px; gap: 8px; }
+  .home-side-icon { font-size: 19px; }
+  .home-side-text { font-size: 13px; letter-spacing: .18em; }
+}
+
+/* 手機改為底部並排，避免蓋住內文 */
+@media (max-width: 720px) {
+  .home-side-action {
+    top: auto;
+    bottom: 0;
+    width: 50%;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    gap: 9px;
+    padding: 14px 10px;
+    border-bottom: 0;
+  }
+  .home-side-action.is-sponsor { left: 0; right: auto; }
+  .home-side-action.is-report { right: 0; left: auto; }
+  .home-side-text {
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    font-size: 14px;
+    letter-spacing: .1em;
+  }
+  .home-side-action.is-sponsor:hover,
+  .home-side-action.is-report:hover { transform: none; }
+  .site-footer { padding-bottom: 78px; }
+}
