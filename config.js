@@ -29,7 +29,8 @@ const FORUM_CONFIG = {
     anyDeskUrl: "https://anydesk.com/zh-tw/downloads/windows",
   },
 
-  sponsorUrl: "",
+  sponsorUrl: "https://web-hosts.net/%E8%83%A4%E5%A4%A9%E5%A4%A9%E5%A0%82.html",   // 自動贊助
+  promoReportUrl: "https://web-hosts.net/share/rfFw7RG0",                          // 推廣回報
 
   floatingPanel: {
     enabled: true,
