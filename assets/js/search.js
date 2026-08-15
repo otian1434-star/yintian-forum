@@ -106,46 +106,17 @@
     return String(url || '').replace(/^\.\//, '');
   }
 
-  const HIDDEN_PAGE_URLS = [
-    'pages/equipment-dragon-seal.html',
-  ];
-
-  const HIDDEN_TEXT_PATTERNS = [
-    /🐉\s*龍印魔石\s*專屬魔石升階/g,
-    /、?龍印魔石強化卷/g,
-    /龍印魔石/g,
-  ];
-
-  function cleanHiddenText(value) {
-    return HIDDEN_TEXT_PATTERNS.reduce(function (text, pattern) {
-      return text.replace(pattern, '');
-    }, String(value || '')).replace(/\s+/g, ' ').trim();
-  }
-
-  function isHiddenRecord(record) {
-    return HIDDEN_PAGE_URLS.includes(normalizeUrl(record.url));
-  }
-
-  function visibleRecord(record) {
-    if (isHiddenRecord(record)) return null;
-    return Object.assign({}, record, {
-      title: cleanHiddenText(record.title),
-      description: cleanHiddenText(record.description),
-      content: cleanHiddenText(record.content),
-    });
-  }
-
   function pageRecords(data) {
     return (data.records || []).map(function (record) {
-      return visibleRecord({
+      return {
         type: 'page',
         title: record.title,
         category: record.category || '固定頁面',
         url: normalizeUrl(record.url),
         description: record.description,
         content: record.content,
-      });
-    }).filter(Boolean);
+      };
+    });
   }
 
   function postRecords(data) {
@@ -332,7 +303,7 @@
     ]).then(function (parts) {
       records = parts.reduce(function (all, part) {
         return part.status === 'fulfilled' ? all.concat(part.value) : all;
-      }, []).map(visibleRecord).filter(Boolean);
+      }, []);
       loaded = true;
       render();
     }).catch(function () {
