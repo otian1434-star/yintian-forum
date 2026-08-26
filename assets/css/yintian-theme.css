@@ -213,3 +213,47 @@ button,
   .page-hdr::after { display: none; }
   .btn-line-o.is-disabled { display: none; }
 }
+
+/* 五大職業特色技能｜王城敕錄 */
+.yintian-edict-hero {
+  display: grid;
+  grid-template-columns: 92px 1fr 72px;
+  gap: 24px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 22px;
+  padding: 34px 38px;
+  border: 1px solid rgba(185,138,79,.52);
+  border-top: 3px double rgba(224,195,146,.62);
+  border-bottom: 3px double rgba(224,195,146,.42);
+  background:
+    repeating-linear-gradient(0deg,rgba(255,255,255,.014) 0 1px,transparent 1px 6px),
+    radial-gradient(circle at 84% 38%,rgba(116,31,29,.26),transparent 26%),
+    linear-gradient(105deg,#251b11,#15100c 66%,#21100d);
+  box-shadow: inset 0 0 50px rgba(0,0,0,.48),0 16px 34px rgba(0,0,0,.26);
+}
+.yintian-edict-mark { display:grid;place-items:center;width:82px;height:82px;border:1px solid #ad7e43;outline:1px solid rgba(185,138,79,.32);outline-offset:6px;color:#e4c48b;background:#110d09;font:700 34px/1 'Noto Serif TC',serif;box-shadow:inset 0 0 18px #000; }
+.yintian-edict-copy small { color:#a97a43;font:600 10px/1.2 'Noto Serif TC',serif;letter-spacing:.48em; }
+.yintian-edict-copy h2 { margin:9px 0 7px;color:#efd5a2;font:700 clamp(24px,3.2vw,36px)/1.3 'Noto Serif TC',serif;letter-spacing:.16em;text-shadow:0 2px 8px #000; }
+.yintian-edict-copy p { max-width:760px;color:#cdbb99;font-size:13px;line-height:2; }
+.yintian-wax-seal { display:grid;place-items:center;width:64px;height:64px;border-radius:50%;border:4px double #9c4841;color:#e4b194;background:radial-gradient(circle,#8b302c,#501411 72%);font:700 23px/1 'Noto Serif TC',serif;box-shadow:0 5px 15px rgba(0,0,0,.5),inset 0 0 10px rgba(0,0,0,.42);transform:rotate(8deg); }
+.yintian-decree-list { display:grid;gap:16px; }
+.yintian-decree { display:grid;grid-template-columns:96px 1fr;scroll-margin-top:86px;border:1px solid rgba(185,138,79,.34);background:linear-gradient(90deg,rgba(116,31,29,.14),transparent 25%),#17120d;box-shadow:inset 0 1px rgba(240,213,162,.04),0 10px 25px rgba(0,0,0,.22); }
+.yintian-decree-order { display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:170px;border-right:1px solid rgba(185,138,79,.26);background:linear-gradient(180deg,rgba(101,29,26,.38),rgba(40,19,13,.52)); }
+.yintian-decree-order span { color:#dfbd80;font:700 32px/1 'Noto Serif TC',serif;text-shadow:0 2px 8px #000; }
+.yintian-decree-order small { color:#a9916b;font:600 11px/1.2 'Noto Serif TC',serif;letter-spacing:.28em;writing-mode:vertical-rl; }
+.yintian-decree-main { padding:22px 28px; }
+.yintian-decree-main header { display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(185,138,79,.22); }
+.yintian-decree-main header span { padding:5px 9px;border:1px solid rgba(185,138,79,.34);color:#bda170;background:rgba(8,6,5,.34);font-size:10px;letter-spacing:.12em; }
+.yintian-decree-main h2 { color:#ebcc94;font:700 22px/1.2 'Noto Serif TC',serif;letter-spacing:.2em; }
+.yintian-decree-main header b { color:#d1a359;font-size:11px;letter-spacing:.1em; }
+.yintian-decree-main > p { color:#cdbd9e;font-size:13px;line-height:1.9; }
+.yintian-decree-main dl { display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:16px;border:1px solid rgba(185,138,79,.2);background:rgba(185,138,79,.2); }
+.yintian-decree-main dl div { padding:9px 10px;background:#110d0a;text-align:center; }
+.yintian-decree-main dt { color:#7f705b;font-size:9px;letter-spacing:.1em; }
+.yintian-decree-main dd { margin-top:2px;color:#e3cfaa;font:600 12px/1.4 'Noto Serif TC',serif; }
+.yintian-imperial-note { position:relative;margin-top:22px;padding:20px 24px 20px 136px;border:1px solid rgba(174,126,68,.5);border-left:5px solid #741f1d;background:repeating-linear-gradient(0deg,rgba(255,255,255,.012) 0 1px,transparent 1px 5px),linear-gradient(90deg,rgba(116,31,29,.22),rgba(83,55,28,.12)); }
+.yintian-imperial-note span { position:absolute;left:24px;top:50%;transform:translateY(-50%);color:#e1bc7e;font:700 14px/1.2 'Noto Serif TC',serif;letter-spacing:.18em; }
+.yintian-imperial-note p { color:#bba98a;font-size:12px;line-height:1.8; }
+@media (max-width:700px) { .yintian-edict-hero{grid-template-columns:64px 1fr;padding:26px 20px;gap:18px}.yintian-edict-mark{width:58px;height:58px;font-size:26px}.yintian-wax-seal{position:absolute;right:15px;bottom:12px;width:48px;height:48px;font-size:18px;opacity:.65}.yintian-decree{grid-template-columns:58px 1fr}.yintian-decree-order{min-height:210px}.yintian-decree-main{padding:18px 15px}.yintian-decree-main header{grid-template-columns:1fr auto}.yintian-decree-main header span{grid-column:1/-1;justify-self:start}.yintian-decree-main dl{grid-template-columns:repeat(2,1fr)}.yintian-imperial-note{padding:18px}.yintian-imperial-note span{position:static;display:block;transform:none;margin-bottom:7px}.yintian-edict-copy small{letter-spacing:.22em} }
