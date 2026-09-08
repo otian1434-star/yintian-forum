@@ -4667,6 +4667,73 @@ img { max-width: 100%; display: block; }
   color: #ffe4a0;
   background: rgba(139, 39, 27, 0.24);
 }
+
+/* 中秋武器表：保留能力欄空間，避免攻擊數值與安定值被拆行 */
+.event-theme-midautumn .cms-table-wrap:has(.cms-table-weapons),
+.post-layout-midautumn .cms-table-wrap:has(.cms-table-weapons) {
+  width: 100%;
+  max-width: 100%;
+}
+.event-theme-midautumn table.cms-table-weapons,
+.post-layout-midautumn table.cms-table-weapons {
+  width: 100% !important;
+  min-width: 1040px !important;
+  table-layout: fixed !important;
+}
+.cms-table-weapons th,
+.cms-table-weapons td {
+  padding: 16px 18px;
+  vertical-align: middle;
+}
+.cms-table-weapons th {
+  white-space: nowrap;
+  text-align: center;
+  letter-spacing: 0.12em;
+}
+.cms-table-weapons th:nth-child(1),
+.cms-table-weapons td:nth-child(1) { width: 150px; }
+.cms-table-weapons th:nth-child(2),
+.cms-table-weapons td:nth-child(2) { width: 250px; }
+.cms-table-weapons th:nth-child(3),
+.cms-table-weapons td:nth-child(3) { width: 90px; }
+.cms-table-weapons th:nth-child(5),
+.cms-table-weapons td:nth-child(5) { width: 72px; }
+.cms-table-weapons td:nth-child(1),
+.cms-table-weapons td:nth-child(2),
+.cms-table-weapons td:nth-child(3),
+.cms-table-weapons td:nth-child(5) {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+.cms-table-weapons td:nth-child(1) {
+  color: #ffe09a;
+  font-weight: 700;
+}
+.cms-table-weapons td:nth-child(3),
+.cms-table-weapons td:nth-child(5) {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+.cms-table-weapons td:nth-child(4) {
+  line-height: 1.85;
+  text-wrap: pretty;
+}
+.cms-table-weapons tbody tr:nth-child(even) {
+  background: rgba(235, 188, 82, 0.035);
+}
+.cms-table-weapons tbody tr:hover {
+  background: rgba(235, 188, 82, 0.075);
+}
+@media (max-width: 760px) {
+  .event-theme-midautumn table.cms-table-weapons,
+  .post-layout-midautumn table.cms-table-weapons {
+    min-width: 980px !important;
+  }
+  .cms-table-weapons th,
+  .cms-table-weapons td {
+    padding: 13px 14px;
+  }
+}
 .event-badge.ended { background: rgba(122,110,90,0.16); color: var(--text-dim); border-color: rgba(122,110,90,0.4); }
 .event-item.is-ended { opacity: 0.6; }
 .event-item.is-ended .event-title { color: var(--text-dim); }

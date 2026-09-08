@@ -253,7 +253,8 @@
         if (cells.every(function (cell) { return /^[-: ]+$/.test(cell); })) return;
         closeList();
         if (!inTable) {
-          html += '<div class="cms-table-wrap" tabindex="0" aria-label="可左右滑動查看完整表格"><table><thead><tr>';
+          var tableClass = cells[0] === '武器名稱' ? ' class="cms-table-weapons"' : '';
+          html += '<div class="cms-table-wrap" tabindex="0" aria-label="可左右滑動查看完整表格"><table' + tableClass + '><thead><tr>';
           cells.forEach(function (cell) { html += '<th>' + inlineMarkdown(cell) + '</th>'; });
           html += '</tr></thead><tbody>';
           inTable = true;
