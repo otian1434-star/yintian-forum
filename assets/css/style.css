@@ -4724,6 +4724,52 @@ img { max-width: 100%; display: block; }
 .cms-table-weapons tbody tr:hover {
   background: rgba(235, 188, 82, 0.075);
 }
+
+/* 中秋武器回收警語：置於武器標題與表格之間 */
+.midautumn-weapon-warning {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0 22px !important;
+  padding: 18px 22px !important;
+  border: 2px solid #ff6158 !important;
+  border-left-width: 7px !important;
+  background:
+    linear-gradient(90deg, rgba(174, 24, 20, 0.54), rgba(92, 12, 14, 0.36)),
+    #18090a !important;
+  color: #fff4d1 !important;
+  text-align: center;
+  box-shadow: 0 0 0 1px rgba(255, 190, 88, 0.34), 0 0 26px rgba(255, 66, 51, 0.24);
+  animation: midautumn-warning-pulse 2.2s ease-in-out infinite;
+}
+.midautumn-weapon-warning strong {
+  color: #ffd064;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-shadow: 0 0 12px rgba(255, 79, 60, 0.62);
+}
+.midautumn-weapon-warning span {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.65;
+  letter-spacing: 0.05em;
+}
+@keyframes midautumn-warning-pulse {
+  0%, 100% { border-color: #ff6158; box-shadow: 0 0 0 1px rgba(255, 190, 88, 0.3), 0 0 20px rgba(255, 66, 51, 0.2); }
+  50% { border-color: #ffad5c; box-shadow: 0 0 0 1px rgba(255, 211, 119, 0.56), 0 0 34px rgba(255, 77, 48, 0.38); }
+}
+@media (max-width: 600px) {
+  .midautumn-weapon-warning {
+    padding: 16px 14px !important;
+  }
+  .midautumn-weapon-warning strong { font-size: 18px; }
+  .midautumn-weapon-warning span { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .midautumn-weapon-warning { animation: none; }
+}
 @media (max-width: 760px) {
   .event-theme-midautumn table.cms-table-weapons,
   .post-layout-midautumn table.cms-table-weapons {

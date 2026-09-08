@@ -229,7 +229,7 @@
     return '';
   }
 
-  function markdownLite(value) {
+  function markdownLite(value, weaponWarning) {
     var lines = String(value || '').split('\n');
     var html = '';
     var inUl = false;
@@ -280,7 +280,11 @@
       }
       if (trimmed.indexOf('### ') === 0) {
         closeList();
-        html += '<h3>' + inlineMarkdown(trimmed.slice(4)) + '</h3>';
+        var heading3 = trimmed.slice(4);
+        html += '<h3>' + inlineMarkdown(heading3) + '</h3>';
+        if (weaponWarning && heading3.indexOf('特殊中秋武器介紹') !== -1) {
+          html += '<div class="cms-callout red midautumn-weapon-warning"><strong>⚠️ 重要警告</strong><span>' + escapeHTML(weaponWarning) + '</span></div>';
+        }
         return;
       }
       if (trimmed.indexOf('## ') === 0) {
@@ -369,7 +373,7 @@
       parts.push('<img class="post-cover" src="' + escapeHTML(post.coverImage) + '" alt="' + escapeHTML(post.title) + '">');
     }
     if (post.body || post.excerpt) {
-      parts.push('<div class="cms-markdown">' + sanitizeTrustedHTML(markdownLite(post.body || post.excerpt || '')) + '</div>');
+      parts.push('<div class="cms-markdown">' + sanitizeTrustedHTML(markdownLite(post.body || post.excerpt || '', post.weaponWarning || '')) + '</div>');
     }
     if (post.customHtml) {
       parts.push('<div class="cms-custom-html">' + sanitizeTrustedHTML(post.customHtml) + '</div>');
