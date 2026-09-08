@@ -508,11 +508,13 @@
       }
       target.innerHTML = '<div class="event-list">' + events.map(function (post) {
         var ended = post.status === '已結束';
-        return '<div class="event-item' + (ended ? ' is-ended' : (post.pinned ? ' is-pinned' : '')) + '">' +
+        var eventId = post.anchor ? ' id="' + escapeHTML(post.anchor) + '"' : '';
+        var themeClass = post.layout === 'midautumn' ? ' event-theme-midautumn' : '';
+        return '<div class="event-item' + (ended ? ' is-ended' : (post.pinned ? ' is-pinned' : '')) + themeClass + '"' + eventId + '>' +
           '<button class="event-head" type="button" aria-expanded="false">' +
             '<span class="event-date">' + escapeHTML(post.date) + '</span>' +
             '<span class="event-title">' + escapeHTML(post.title) + '</span>' +
-            '<span class="event-badge' + (ended ? ' ended' : '') + '">' + (ended ? '已結束' : '進行中') + '</span>' +
+            '<span class="event-badge' + (ended ? ' ended' : '') + '">' + escapeHTML(post.status || (ended ? '已結束' : '進行中')) + '</span>' +
             '<span class="event-arrow" aria-hidden="true">▾</span>' +
           '</button>' +
           '<div class="event-body cms-rich" hidden>' + renderPostBody(post) + '</div>' +
@@ -533,6 +535,21 @@
           }
         });
       });
+      if (window.location.hash) {
+        var hashTarget = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+        if (hashTarget && target.contains(hashTarget)) {
+          var hashHead = hashTarget.querySelector('.event-head');
+          var hashBody = hashTarget.querySelector('.event-body');
+          if (hashHead && hashBody) {
+            hashBody.removeAttribute('hidden');
+            hashHead.classList.add('is-open');
+            hashHead.setAttribute('aria-expanded', 'true');
+          }
+          window.requestAnimationFrame(function () {
+            hashTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        }
+      }
     }).catch(function () {
       target.innerHTML = '<div class="notice red">活動資料讀取失敗，請確認 data/posts.json 是否存在。</div>';
     });

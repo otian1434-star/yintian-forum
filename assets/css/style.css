@@ -4602,6 +4602,71 @@ img { max-width: 100%; display: block; }
 .event-arrow { flex: 0 0 auto; color: var(--text-dim); font-size: 12px; transition: transform 0.2s, color 0.2s; }
 .event-head.is-open .event-arrow { transform: rotate(180deg); color: var(--gold); }
 .event-body { padding: 4px 18px 20px; border-top: 1px solid var(--border); }
+
+/* 中秋節活動主題：月夜、桂金與暖紅燈彩 */
+.event-item.event-theme-midautumn,
+.post-card.post-layout-midautumn {
+  position: relative;
+  border-color: rgba(231, 190, 92, 0.58);
+  background:
+    radial-gradient(circle at 92% 42px, rgba(255, 239, 176, 0.24) 0 28px, rgba(255, 218, 112, 0.08) 29px 46px, transparent 47px),
+    radial-gradient(circle at 8% 100%, rgba(152, 42, 28, 0.16), transparent 34%),
+    linear-gradient(145deg, #17120d 0%, #0d1018 52%, #171008 100%);
+  box-shadow: inset 0 0 36px rgba(224, 169, 60, 0.05), 0 10px 32px rgba(0, 0, 0, 0.24);
+}
+.event-item.event-theme-midautumn::after,
+.post-card.post-layout-midautumn::after {
+  content: "☾  ·  ✦  ·  桂影映月";
+  position: absolute;
+  right: 18px;
+  bottom: 10px;
+  color: rgba(244, 210, 125, 0.18);
+  font-family: 'Noto Serif TC', serif;
+  font-size: 12px;
+  letter-spacing: 4px;
+  pointer-events: none;
+}
+.event-theme-midautumn .event-head {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(150, 42, 28, 0.2), transparent 46%, rgba(222, 174, 68, 0.07));
+}
+.event-theme-midautumn .event-head:hover,
+.event-theme-midautumn .event-head.is-open {
+  background: linear-gradient(90deg, rgba(176, 52, 32, 0.28), rgba(211, 159, 57, 0.1));
+}
+.event-theme-midautumn .event-title,
+.post-card.post-layout-midautumn > h2 {
+  color: #ffe28f;
+  text-shadow: 0 0 16px rgba(239, 184, 67, 0.3);
+}
+.event-theme-midautumn .event-badge {
+  color: #ffe6a6;
+  border-color: rgba(232, 183, 70, 0.52);
+  background: rgba(150, 45, 28, 0.3);
+}
+.event-theme-midautumn .event-body {
+  position: relative;
+  z-index: 1;
+  border-top-color: rgba(226, 178, 69, 0.32);
+  background: rgba(5, 7, 13, 0.3);
+}
+.event-theme-midautumn .cms-rich h2,
+.event-theme-midautumn .cms-rich h3,
+.post-layout-midautumn .cms-rich h2,
+.post-layout-midautumn .cms-rich h3 {
+  color: #f5cb70;
+}
+.event-theme-midautumn .cms-table-wrap,
+.post-layout-midautumn .cms-table-wrap {
+  border-color: rgba(226, 178, 69, 0.36);
+  background: rgba(10, 8, 8, 0.56);
+}
+.event-theme-midautumn .cms-rich th,
+.post-layout-midautumn .cms-rich th {
+  color: #ffe4a0;
+  background: rgba(139, 39, 27, 0.24);
+}
 .event-badge.ended { background: rgba(122,110,90,0.16); color: var(--text-dim); border-color: rgba(122,110,90,0.4); }
 .event-item.is-ended { opacity: 0.6; }
 .event-item.is-ended .event-title { color: var(--text-dim); }
