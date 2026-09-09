@@ -20,12 +20,12 @@ const FORUM_CONFIG = {
   teamName: "胤天天堂管理團隊",
 
   download: {
-    mainUrl: "https://drive.google.com/file/d/1EW7l9zh31lFnInee8T18D0F5GtP66-HF/view?usp=sharing",   // 下載點一
-    backup1: "https://disk.cloud-shield.app/s/UHn52x",                                               // 下載點二
-    backup2: "https://drive.google.com/file/d/1SO3xROODABPeyH3O53XJrKyBpCqUKSMU/view?usp=sharing",   // 下載點三
-    backup3: "https://drive.google.com/file/d/1njpBShZ2vOEsrSdhbElYUcvoTGY_4bRS/view?usp=sharing",   // 備用載點
+    mainUrl: "https://disk.cloud-shield.app/s/99y5ne",   // 下載點一
+    backup1: "https://disk.cloud-shield.app/s/uN9JAc",   // 下載點二
+    backup2: "https://disk.cloud-shield.app/s/QTJJwV",   // 下載點三
+    backup3: "",
     patchUrl: "",
-    updateDate: "2026/08/11",
+    updateDate: "2026/09/09",
     anyDeskUrl: "https://anydesk.com/zh-tw/downloads/windows",
   },
 

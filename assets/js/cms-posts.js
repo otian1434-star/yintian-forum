@@ -369,14 +369,33 @@
 
   function renderPostBody(post) {
     var parts = [];
+    var bodyText = post.body || post.excerpt || '';
     if (post.coverImage) {
       parts.push('<img class="post-cover" src="' + escapeHTML(post.coverImage) + '" alt="' + escapeHTML(post.title) + '">');
     }
-    if (post.body || post.excerpt) {
-      parts.push('<div class="cms-markdown">' + sanitizeTrustedHTML(markdownLite(post.body || post.excerpt || '', post.weaponWarning || '')) + '</div>');
+    if (post.downloadPack) {
+      bodyText = bodyText.replace('下載區仍在整理中，完成後將另行提供連結。', '最新懶人包已上傳，請使用下方任一載點下載。');
+    }
+    if (bodyText) {
+      parts.push('<div class="cms-markdown">' + sanitizeTrustedHTML(markdownLite(bodyText, post.weaponWarning || '')) + '</div>');
     }
     if (post.customHtml) {
       parts.push('<div class="cms-custom-html">' + sanitizeTrustedHTML(post.customHtml) + '</div>');
+    }
+    if (post.downloadPack && Array.isArray(post.downloadPack.links)) {
+      var packLinks = post.downloadPack.links.filter(function (link) { return link && link.url; }).map(function (link) {
+        return '<a class="cms-download-pack-link" href="' + escapeHTML(link.url) + '" target="_blank" rel="noopener">' +
+          '<small>' + escapeHTML(link.note || '懶人包載點') + '</small>' +
+          '<strong>' + escapeHTML(link.label || '立即下載') + '</strong>' +
+          '<span>前往下載 →</span>' +
+        '</a>';
+      }).join('');
+      if (packLinks) {
+        parts.push('<section class="cms-download-pack" aria-label="最新懶人包下載">' +
+          '<div class="cms-download-pack-heading"><span aria-hidden="true">📦</span><div><h3>' + escapeHTML(post.downloadPack.title || '最新懶人包下載') + '</h3><p>' + escapeHTML(post.downloadPack.description || '') + '</p></div></div>' +
+          '<div class="cms-download-pack-links">' + packLinks + '</div>' +
+        '</section>');
+      }
     }
     return parts.join('');
   }

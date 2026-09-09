@@ -32,6 +32,15 @@
         "pinned": true,
         "status": "預計更新",
         "anchor": "update-2026-09-09",
+        "downloadPack": {
+          "title": "最新懶人包下載",
+          "description": "三個載點內容相同，任選一個下載即可。",
+          "links": [
+            { "label": "下載點一", "note": "建議優先", "url": "https://disk.cloud-shield.app/s/99y5ne" },
+            { "label": "下載點二", "note": "備用載點", "url": "https://disk.cloud-shield.app/s/uN9JAc" },
+            { "label": "下載點三", "note": "備用載點", "url": "https://disk.cloud-shield.app/s/QTJJwV" }
+          ]
+        },
         "title": "09/09-更新歷程",
         "date": "2026/09/09",
         "excerpt": "新增支配之塔 2 樓傳送與 BOSS、調整傷害爆擊公式及巴風特魔杖、開放 Lv.65 10%，同步更換中秋活動並進行伺服器合併。",
